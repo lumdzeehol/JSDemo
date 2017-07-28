@@ -1,0 +1,38 @@
+/* 
+* @Author: Marte
+* @Date:   2017-07-27 13:46:56
+* @Last Modified by:   Marte
+* @Last Modified time: 2017-07-27 13:50:44
+*/
+
+
+.box{
+    width:600px;
+    height: 300px;
+    margin: 200px   auto;
+    text-align: center;
+    font-size: 30px;
+}
+.time{
+    width: 25px;
+    height: 37px;
+    display:inline-block;   
+}
+#time_0{
+    background:url(imgs/0.png);
+}
+#time_1{
+    background:url(imgs/0.png);
+}
+#time_2{
+    background:url(imgs/0.png);
+}
+#time_3{
+    background:url(imgs/0.png);
+}
+#time_4{
+    background:url(imgs/0.png);
+}
+#time_5{
+    background:url(imgs/0.png);
+}
