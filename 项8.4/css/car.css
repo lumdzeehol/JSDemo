@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-08-05 14:24:56
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-08-05 16:48:25
+* @Last Modified time: 2017-08-05 17:42:48
 */
 #shopCar{
 
@@ -135,8 +135,8 @@
     color:#378D22;
 }
 .remove{
-    width: 53px;
-    padding-left: 16px;
+    width: 50px;
+    padding-left: 10px;
     box-sizing: border-box;
 }
 .remove button{
