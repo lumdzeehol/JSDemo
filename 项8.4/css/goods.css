@@ -1,0 +1,71 @@
+*{margin:0;padding:0;}
+ul{list-style:none;}
+a{text-decoration:none;}
+.clearfixed::after{
+    content:"";
+    height:0;
+    clear:both;
+    display:block;
+    overflow:hidden;
+    visibility:hidden;
+}
+/*.container{
+    width:980px;
+    margin:0 auto;
+}*/
+/*header{
+    height:88px;
+}*/
+#mains{
+    height:700px;
+    margin-top: 100px;
+}
+#mains #header{
+    background-color: #fff;
+}
+#mains #goodsDetail img{
+    display:block;
+    float:left;
+    width:200px;
+    height:200px;
+    margin-right:10px;
+}
+#mains #goodsDetail .mainRight{
+    width:500px;
+    float:left;
+}
+#mains #goodsDetail .mainRight h4{
+    font-size:24px;
+    line-height: 40px;
+}
+#mains #goodsDetail .mainRight p{
+    display:block;
+    margin-top:20px;
+    width:400px;
+    height:40px;
+    font-size:24px;
+    color:red;
+    line-height: 40px;
+    border-radius:5px;
+    background:#eceaea;
+    padding:5px 20px;
+}
+#mains #goodsDetail .mainRight .buyCar{
+    width:500px;
+    height:100px;
+    padding:30px 5px;
+}
+#mains #goodsDetail .mainRight .buyBtn{
+    display:inline-block;
+    width:136px;
+    height:39px;
+    border-radius:2px;
+    background:url("../images/main.fw.png") -80px -30px;
+}
+#mains #goodsDetail .mainRight .buyCarBtn{
+    display:inline-block;
+    width:182px;
+    height:39px;
+    border-radius:2px;
+    background:url("../images/main.fw.png") -80px -90px;
+}
