@@ -1,0 +1,319 @@
+/* 
+* @Author: lmm
+* @Date:   2017-08-05 14:07:40
+* @Last Modified by:   Marte
+* @Last Modified time: 2017-08-08 18:59:50
+*/
+/*详情介绍部分*/
+.review_box .container .description {
+    width: 740px;
+    height: 514px;
+}
+.description .des_box {
+    width: 740px;
+    border-right: 4px  solid #ECECEC;
+    height: 474px;
+}
+.description .des_box img:first-child {
+    padding-top: 2px;
+}
+.description .des_box p {
+    height: 257px;
+    padding: 10px;
+    font-size: 12px;
+    line-height: 20px;
+}
+.description .des_box .scroll_img {
+    height: 86px;
+    background-color: #ccc;
+}
+/*评论部分*/
+
+ .review_box .container .review {
+    width: 740px;
+    border-right: 4px  solid #ECECEC;
+    margin-bottom: 5px;
+}
+.description h3,.review h3{
+    font-size: 14px;
+    line-height: 40px;
+}
+.review .re_top,.review .re_bottom {
+     width: 740px;
+     border-top: 2px solid #404040;
+     padding-top: 2px;
+
+}
+/*top*/
+.review .re_top {
+     height: 749px;
+}
+.review .re_top .gray {
+    width: 720px;
+    height: 90px;
+    padding: 10px;
+    background-color: #EFEFEF;
+}
+.re_top .average p {
+    font-size: 12px;
+    line-height: 22px;
+}
+.re_top .average .averageStar .active {
+    color: orange;
+}
+.re_top .average .averageStar i{
+    color: #ccc;
+}
+.re_top .average #reviewN {
+    color: red;
+    padding-right: 5px;
+}
+/*左边星星*/
+.re_top .average .star {
+    line-height: 20px;
+    color: #ccc;
+}
+
+.re_top .starlists ul li {
+    /*width: 279px;*/
+    font-size: 12px;
+    line-height: 19px;
+    height: 17px;
+}
+/*w77*/
+.re_top .starlists ul li .star {
+    padding: 0 9px;
+    color: orange;
+    /*vertical-align: top;*/
+}
+.re_top .starlists ul li .star .active {
+    color: #ccc;
+}
+.re_top .starlists ul li .star i {
+    font-size: 12px;
+    line-height: 17px;
+}
+.re_top .starlists ul li .scroll {
+    display: inline-block;
+    width: 135px;
+    height: 10px;
+    background-color: #ccc;
+    margin-top: 4px;
+    margin-right: 7px;
+    position: relative;
+}
+.re_top .starlists ul li .scroll i {
+    display: block;
+    width: 100px;
+    max-width: 135px;
+    height: 10px;
+    background-color: green;
+    position: absolute;
+    top:0;
+    left:0;
+}
+.re_top .starlists ul li .scroll .gr4{
+    width: 80px;
+    max-width: 135px;
+}
+.re_top .starlists ul li .scroll .gr3{
+    width: 55px;
+    max-width: 135px;
+}
+.re_top .starlists ul li .scroll .gr2{
+    width: 30px;
+    max-width: 135px;
+}
+.re_top .starlists ul li .scroll .gr1{
+    width: 10px;
+    max-width: 135px;
+}
+.re_top .starlists ul li span:nth-child(3){
+    color: red;
+}
+/*center*/
+.re_top .review_list {
+    width: 740px;
+    height: 637px;
+    position: relative;
+}
+.re_top .review_list ul {
+    height: 600px;
+    overflow: hidden;
+}
+/*生成部分星星样式*/
+.re_top .review_list ul li {
+    border-bottom: 1px dotted #ccc;
+}
+.re_top .review_list ul li .icon-star{
+    color: #ccc;
+}
+.re_top .review_list ul li .l_star{
+    color:orange;
+}
+.re_top .review_list ul li .icon-star .active {
+    color: orange;
+}
+.re_top .review_list ul li .left {
+    width: 140px;
+}
+.re_top .review_list ul li .right {
+    width: 600px;
+}
+.re_top .review_list ul li .right>p {
+    width: 600px;
+    line-height: 24px;
+    font-size: 13px;
+}
+.re_top .review_list ul li .left>span{
+    display: block;
+    width: 120px;
+    padding-right: 20px;
+}
+.re_top .review_list ul li .left .date {
+    font-size: 13px;
+    line-height: 20px;
+}
+.re_top .review_list ul li .left .name {
+    color: orange;
+    font-size: 16px;
+    line-height: 24px;
+}
+.re_top .review_list ul li .left .zan {
+    color: pink;
+    font-size: 12px;
+}
+.re_top .review_list ul li .left .zan i {
+    font-size: 14px;
+}
+.re_top .review_list ul li .right .thank {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    border: 1px  dashed  green;
+    padding: 5px 516px 5px 5px;
+}
+/*分页*/
+.re_top .review_list .page {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 740px;
+    height: 36px;
+    z-index: 2;
+}
+.re_top .review_list .page a {
+   display: block;
+   height: 36px;
+   font-size: 13px;
+   line-height: 36px;
+   float: left;
+   padding: 0 10px;
+   color: #000;
+}
+.re_top .review_list .page i {
+    position: absolute;
+    right: 44px;
+    top:15px;
+    width: 0;
+    height: 0;
+    border: 5px solid #fff;
+    border-top: 5px solid #000;
+
+}
+.re_top .review_list .page a:first-child {
+    margin-left: 500px;
+}
+/*bottom*/
+.review .re_bottom {
+    height: 394px;
+}
+.review .re_bottom input {
+    outline: none;
+}
+.review .re_bottom .star {
+    line-height: 40px;
+}
+.review .re_bottom p,.review .re_bottom label {
+    line-height: 14px;
+}
+.review .re_bottom .star>.icon-star {
+    color: #ccc;
+}
+.review .re_bottom .star> .active {
+    color: orange;
+}
+.review .re_bottom .rail{
+    height: 15px;
+    background: url(../images/review_bottom_bg.png) repeat-x;
+}
+.review .re_bottom #yourname,.review .re_bottom #content {
+    margin-bottom: 14px;
+}
+.review .re_bottom #input_vcode {
+    margin: 10px 0;
+    width: 53px;
+    height: 24px;
+}
+.review .re_bottom #verification_code {
+    margin-left: 20px;
+    display: inline-block;
+    width: 120px;
+    height: 24px;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    background-color: #ccc;
+}
+.review .re_bottom #subtn {
+    width: 63px;
+    height: 32px;
+    background-color: orange;
+    color: #fff;
+    font-size: 12px;
+    line-height: 32px;
+    border: none;
+}
+.review_box .container .box_right {
+    width: 235px;
+    height: 730px;
+}
+.review_box .container .box_right .customer {
+    width: 235px;
+    height: 44px;
+    padding-top: 12px;
+}
+.show {
+    display: block;
+ }
+ .hidden {
+    display: none;
+ }
+ #mainBodyU1 li{
+    height:300px;
+    padding-top:5px;
+    border:1px solid #fff;
+    border-bottom:1px dashed #ccc;
+    padding: 0 18px;
+}
+ #mainBodyU1 li:hover img{
+    opacity:0.7;
+}
+ #mainBodyU1 li img{
+    width:198px;
+}
+ #mainBodyU1 li h4{
+    font-size:15px;
+}
+ #mainBodyU1 li p span{
+    font-size:15px;
+    color:red;
+}
+ #mainBodyU1 li p span::before{
+    content: '￥';
+}
+ #mainBodyU1 li p{
+    font-size:14px;
+    font-weight:bold;
+    color:#000;
+}

@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="font/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="css/public.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript">
+    window.onload=function(){
+        //侧边栏下方商品列表
+        inUl1();
+        //主商品列表
+        inUl2();
+        //返回顶部按钮和吸顶菜单
+        toTop1();
+        //价格从高到低排序
+        priceUp();
+        // 价格从低到高排序
+        priceDown();
+        initNav();
+        //顶部购物车
+        lz_loadCar_index();
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container clear">
+             <div class="top clear">
+                <p class="fl">Welcome,<a href="#"> Sign in</a> or <a href="#">Reqister</a><span> test</span>,<a href="#"> Sign out</a></p>
+                <ul class="fr clear" >
+                    <li class="li_1">
+                        <a href="#">My Account</a><i class="iconfont icon-sanjiaoxing02"></i>
+                        <div class="list1">
+                            <a href="#">My Account</a>
+                            <a href="#">My Account</a>
+                            <a href="#">My Account</a>
+                            <a href="#">My Account</a>
+                            <a href="#">My Account</a>
+                            <a href="#">My Account</a>
+                        </div>
+                    </li>
+                    <li class="li_2">
+                         <i class="iconfont icon-gouwuche"></i><span> 0 Items</span><span class="spa_2"> $0</span><i class="iconfont icon-sanjiaoxing02"></i>
+                         <div class="list_box">
+                             <ul class="list2">
+                             </ul>
+                             <h4 >Subtotal:<strong>$0</strong></h4>
+                             <a href="html/car.html" class="tocarHtml">Check Out</a>
+                         </div> 
+                        </li>
+                    <li><a href="#">Order Tracking</a></li>
+                    <li><i class="iconfont icon-wenhaokongxin"></i><a href="#">Help</a></li>
+                </ul>
+             </div>
+             <div class="clear menu" id="search" > 
+                 <img class="fl" src="images/logosmall.png" alt="logo" />             
+                 <div class="fl form clear">
+                     <input type="text" class="txt" placeholder="Please enter the keywords" />
+                     <input type="button" class="btn" value="search" />
+                 </div>
+             </div>
+             <p class="p1"><a href="#">LV Handbags</a><a href="#">shoes</a><a href="#">Rolex watch</a></p>            
+        </div>
+        <div id="topSearch">
+            <div class="container">
+                <img class="fl" src="images/logosmall.png" alt="logo" />             
+                <div class="fl form clear">
+                    <input type="text" class="txt" placeholder="Please enter the keywords" />
+                    <input type="button" class="btn" value="search" />
+                </div>
+            </div>
+             
+        </div>
+    </header>
+    <nav>
+        <div class="container">
+            <div class="fl nav_left">
+                <p>主题市场<i></i></p>
+                <ul class="nav_sec">
+                    <li class="nav_sec_item">
+                        <div class="secitem_tp">
+                            <span>Bags</span>
+                            <i></i>
+                        </div>
+                        <div class="secitem_cont">
+                            <span><a href="##">Luggage</a></span>
+                            <span><a href="##">Boston</a></span>
+                            <span><a href="##">Mayfair</a></span>
+                            <span><a href="##">Birkin</a></span>
+                            <span><a href="##">Monogram</a></span>
+                        </div>
+                        <div class="nav_trd">
+                            <div class="trd_left fl">
+                                <div class="trd_item fl">
+                                    <div class="trd_title">
+                                        NFL
+                                    </div>
+                                    <ul class="trd_cont clearfix">
+                                        <li><a href="##">Baltimore Ravens</a></li>
+                                        <li><a href="##">Buffalo Bills</a></li>
+                                        <li><a href="##">Cincinnati Bengals</a></li>
+                                        <li><a href="##">Cleveland Browns</a></li>
+                                        <li><a href="##">Denver Broncos</a></li>
+                                        <li><a href="##">Houston Texans</a></li>
+                                        <li><a href="##">Baltimore Ravens</a></li>
+                                        <li><a href="##">Buffalo Bills</a></li>
+                                        <li><a href="##">Cincinnati Bengals</a></li>
+                                        <li><a href="##">Cleveland Browns</a></li>
+                                        <li><a href="##">Denver Broncos</a></li>
+                                        <li><a href="##">Houston Texans</a></li>
+                                        <li><a href="##">Baltimore Ravens</a></li>
+                                        <li><a href="##">Buffalo Bills</a></li>
+                                        <li><a href="##">Cincinnati Bengals</a></li>
+                                        <li><a href="##">Cleveland Browns</a></li>
+                                        <li><a href="##">Denver Broncos</a></li>
+                                        <li><a href="##">Houston Texans</a></li>
+                                        <li><a href="##">Baltimore Ravens</a></li>
+                                        <li><a href="##">Buffalo Bills</a></li>
+                                        <li><a href="##">Cincinnati Bengals</a></li>
+                                        <li><a href="##">Cleveland Browns</a></li>
+                                        <li><a href="##">Denver Broncos</a></li>
+                                        <li><a href="##">Houston Texans</a></li>
+                                        <li><a href="##">Baltimore Ravens</a></li>
+                                        <li><a href="##">Buffalo Bills</a></li>
+                                        <li><a href="##">Cincinnati Bengals</a></li>
+                                        <li><a href="##">Cleveland Browns</a></li>
+                                        <li><a href="##">Denver Broncos</a></li>
+                                        <li><a href="##">Houston Texans</a></li>
+                                        <li><a href="##">Baltimore Ravens</a></li>
+                                        <li><a href="##">Buffalo Bills</a></li>
+                                        <li><a href="##">Cincinnati Bengals</a></li>
+                                    </ul>
+                                </div>
+                                <div class="trd_item fl">
+                                    <div class="trd_title">
+                                        NBA
+                                    </div>
+                                    <ul class="trd_cont">
+                                        <li><a href="##">Eastern Conference</a></li>
+                                        <li><a href="##">Western Conference</a></li>
+                                        <li><a href="##">2012 USA Basketball</a></li>
+                                    </ul>
+                                </div>
+                                <div class="trd_item fl">
+                                    <div class="trd_title">
+                                        MLB
+                                    </div>
+                                    <ul class="trd_cont">
+                                        <li><a href="##">National League</a></li>
+                                        <li><a href="##">American League</a></li>
+                                    </ul>
+                                </div>
+                                <div class="trd_item fl">
+                                    <div class="trd_title">
+                                        NHL
+                                    </div>
+                                    <ul class="trd_cont">
+                                        <li><a href="##">Eastern Conference</a></li>
+                                        <li><a href="##">Western Conference</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="trd_right fl">
+                                <a href="##" class="arrivals">
+                                    New Arrivals<i></i>   
+                                </a>
+                                <p class="final"><a href="##">Final Sale<i></i></a></p>
+                                <ul class="arrivallist">
+                                    <li><a href="##">Louis Vuitton</a><i></i></li>
+                                    <li><a href="##">Gucci Handbags</a><i></i></li>
+                                    <li><a href="##">Prada Handbags</a><i></i></li>
+                                    <li><a href="##">Hermes Handbags</a><i></i></li>
+                                    <li><a href="##">Burberry Handbags</a><i></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav_sec_item">
+                        <div class="secitem_tp">
+                            <span>Shoes</span>
+                            <i></i>
+                        </div>
+                        <div class="secitem_cont">
+                            <span><a href="##">Luggage</a></span>
+                            <span><a href="##">Boston</a></span>
+                            <span><a href="##">Mayfair</a></span>
+                            <span><a href="##">Birkin</a></span>
+                            <span><a href="##">Monogram</a></span>
+                        </div>
+                        <div class="nav_trd">
+                            <div class="trd_left fl">
+                                <div class="trd_item fl">
+                                    <div class="trd_title">
+                                        Shoes NFL
+                                    </div>
+                                    <ul class="trd_cont clearfix">
+                                        <li><a href="##">Baltimore Ravens</a></li>
+                                        <li><a href="##">Buffalo Bills</a></li>
+                                        <li><a href="##">Cincinnati Bengals</a></li>
+                                        <li><a href="##">Cleveland Browns</a></li>
+                                        <li><a href="##">Denver Broncos</a></li>
+                                        <li><a href="##">Houston Texans</a></li>
+                                        <li><a href="##">Baltimore Ravens</a></li>
+                                        <li><a href="##">Buffalo Bills</a></li>
+                                        <li><a href="##">Cincinnati Bengals</a></li>
+                                        <li><a href="##">Cleveland Browns</a></li>
+                                        <li><a href="##">Denver Broncos</a></li>
+                                        <li><a href="##">Houston Texans</a></li>
+                                        <li><a href="##">Baltimore Ravens</a></li>
+                                        <li><a href="##">Buffalo Bills</a></li>
+                                        <li><a href="##">Cincinnati Bengals</a></li>
+                                        <li><a href="##">Cleveland Browns</a></li>
+                                        <li><a href="##">Denver Broncos</a></li>
+                                        <li><a href="##">Houston Texans</a></li>
+                                        <li><a href="##">Baltimore Ravens</a></li>
+                                        <li><a href="##">Buffalo Bills</a></li>
+                                        <li><a href="##">Cincinnati Bengals</a></li>
+                                        <li><a href="##">Cleveland Browns</a></li>
+                                        <li><a href="##">Denver Broncos</a></li>
+                                        <li><a href="##">Houston Texans</a></li>
+                                        <li><a href="##">Baltimore Ravens</a></li>
+                                        <li><a href="##">Buffalo Bills</a></li>
+                                        <li><a href="##">Cincinnati Bengals</a></li>
+                                        <li><a href="##">Cleveland Browns</a></li>
+                                        <li><a href="##">Denver Broncos</a></li>
+                                        <li><a href="##">Houston Texans</a></li>
+                                        <li><a href="##">Baltimore Ravens</a></li>
+                                        <li><a href="##">Buffalo Bills</a></li>
+                                        <li><a href="##">Cincinnati Bengals</a></li>
+                                    </ul>
+                                </div>
+                                <div class="trd_item fl">
+                                    <div class="trd_title">
+                                        NBA
+                                    </div>
+                                    <ul class="trd_cont">
+                                        <li><a href="##">Eastern Conference</a></li>
+                                        <li><a href="##">Western Conference</a></li>
+                                        <li><a href="##">2012 USA Basketball</a></li>
+                                    </ul>
+                                </div>
+                                <div class="trd_item fl">
+                                    <div class="trd_title">
+                                        MLB
+                                    </div>
+                                    <ul class="trd_cont">
+                                        <li><a href="##">National League</a></li>
+                                        <li><a href="##">American League</a></li>
+                                    </ul>
+                                </div>
+                                <div class="trd_item fl">
+                                    <div class="trd_title">
+                                        NHL
+                                    </div>
+                                    <ul class="trd_cont">
+                                        <li><a href="##">Eastern Conference</a></li>
+                                        <li><a href="##">Western Conference</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="trd_right fl">
+                                <a href="##" class="arrivals">
+                                    New Arrivals<i></i>   
+                                </a>
+                                <p class="final"><a href="##">Final Sale<i></i></a></p>
+                                <ul class="arrivallist">
+                                    <li><a href="##">Louis Vuitton</a><i></i></li>
+                                    <li><a href="##">Gucci Handbags</a><i></i></li>
+                                    <li><a href="##">Prada Handbags</a><i></i></li>
+                                    <li><a href="##">Hermes Handbags</a><i></i></li>
+                                    <li><a href="##">Burberry Handbags</a><i></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav_sec_item">
+                        <div class="secitem_tp">
+                            <span>Clothes</span>
+                            <i></i>
+                        </div>
+                        <div class="secitem_cont">
+                            <span><a href="##">Luggage</a></span>
+                            <span><a href="##">Boston</a></span>
+                            <span><a href="##">Mayfair</a></span>
+                            <span><a href="##">Birkin</a></span>
+                            <span><a href="##">Monogram</a></span>
+                        </div>
+                        <div class="nav_trd">
+                            <div class="trd_left fl">
+                                <div class="trd_item fl">
+                                    <div class="trd_title">
+                                        Cloth NFL
+                                    </div>
+                                    <ul class="trd_cont clearfix">
+                                        <li><a href="##">Baltimore Ravens</a></li>
+                                        <li><a href="##">Buffalo Bills</a></li>
+                                        <li><a href="##">Cincinnati Bengals</a></li>
+                                        <li><a href="##">Cleveland Browns</a></li>
+                                        <li><a href="##">Denver Broncos</a></li>
+                                        <li><a href="##">Houston Texans</a></li>
+                                        <li><a href="##">Baltimore Ravens</a></li>
+                                        <li><a href="##">Buffalo Bills</a></li>
+                                        <li><a href="##">Cincinnati Bengals</a></li>
+                                        <li><a href="##">Cleveland Browns</a></li>
+                                        <li><a href="##">Denver Broncos</a></li>
+                                        <li><a href="##">Houston Texans</a></li>
+                                        <li><a href="##">Baltimore Ravens</a></li>
+                                        <li><a href="##">Buffalo Bills</a></li>
+                                        <li><a href="##">Cincinnati Bengals</a></li>
+                                        <li><a href="##">Cleveland Browns</a></li>
+                                        <li><a href="##">Denver Broncos</a></li>
+                                        <li><a href="##">Houston Texans</a></li>
+                                        <li><a href="##">Baltimore Ravens</a></li>
+                                        <li><a href="##">Buffalo Bills</a></li>
+                                        <li><a href="##">Cincinnati Bengals</a></li>
+                                        <li><a href="##">Cleveland Browns</a></li>
+                                        <li><a href="##">Denver Broncos</a></li>
+                                        <li><a href="##">Houston Texans</a></li>
+                                        <li><a href="##">Baltimore Ravens</a></li>
+                                        <li><a href="##">Buffalo Bills</a></li>
+                                        <li><a href="##">Cincinnati Bengals</a></li>
+                                        <li><a href="##">Cleveland Browns</a></li>
+                                        <li><a href="##">Denver Broncos</a></li>
+                                        <li><a href="##">Houston Texans</a></li>
+                                        <li><a href="##">Baltimore Ravens</a></li>
+                                        <li><a href="##">Buffalo Bills</a></li>
+                                        <li><a href="##">Cincinnati Bengals</a></li>
+                                    </ul>
+                                </div>
+                                <div class="trd_item fl">
+                                    <div class="trd_title">
+                                        NBA
+                                    </div>
+                                    <ul class="trd_cont">
+                                        <li><a href="##">Eastern Conference</a></li>
+                                        <li><a href="##">Western Conference</a></li>
+                                        <li><a href="##">2012 USA Basketball</a></li>
+                                    </ul>
+                                </div>
+                                <div class="trd_item fl">
+                                    <div class="trd_title">
+                                        MLB
+                                    </div>
+                                    <ul class="trd_cont">
+                                        <li><a href="##">National League</a></li>
+                                        <li><a href="##">American League</a></li>
+                                    </ul>
+                                </div>
+                                <div class="trd_item fl">
+                                    <div class="trd_title">
+                                        NHL
+                                    </div>
+                                    <ul class="trd_cont">
+                                        <li><a href="##">Eastern Conference</a></li>
+                                        <li><a href="##">Western Conference</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="trd_right fl">
+                                <a href="##" class="arrivals">
+                                    New Arrivals<i></i>   
+                                </a>
+                                <p class="final"><a href="##">Final Sale<i></i></a></p>
+                                <ul class="arrivallist">
+                                    <li><a href="##">Louis Vuitton</a><i></i></li>
+                                    <li><a href="##">Gucci Handbags</a><i></i></li>
+                                    <li><a href="##">Prada Handbags</a><i></i></li>
+                                    <li><a href="##">Hermes Handbags</a><i></i></li>
+                                    <li><a href="##">Burberry Handbags</a><i></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav_sec_item">
+                        <div class="secitem_tp">
+                            <span>Bags</span>
+                            <i></i>
+                        </div>
+                        <div class="secitem_cont">
+                            <span><a href="##">Luggage</a></span>
+                            <span><a href="##">Boston</a></span>
+                            <span><a href="##">Mayfair</a></span>
+                            <span><a href="##">Birkin</a></span>
+                            <span><a href="##">Monogram</a></span>
+                        </div>
+                        <div class="nav_trd">
+                            <div class="trd_left fl">
+                                <div class="trd_item fl">
+                                    <div class="trd_title">
+                                        NFL
+                                    </div>
+                                    <ul class="trd_cont clearfix">
+                                        <li><a href="##">Baltimore Ravens</a></li>
+                                        <li><a href="##">Buffalo Bills</a></li>
+                                        <li><a href="##">Cincinnati Bengals</a></li>
+                                        <li><a href="##">Cleveland Browns</a></li>
+                                        <li><a href="##">Denver Broncos</a></li>
+                                        <li><a href="##">Houston Texans</a></li>
+                                        <li><a href="##">Baltimore Ravens</a></li>
+                                        <li><a href="##">Buffalo Bills</a></li>
+                                        <li><a href="##">Cincinnati Bengals</a></li>
+                                        <li><a href="##">Cleveland Browns</a></li>
+                                        <li><a href="##">Denver Broncos</a></li>
+                                        <li><a href="##">Houston Texans</a></li>
+                                        <li><a href="##">Baltimore Ravens</a></li>
+                                        <li><a href="##">Buffalo Bills</a></li>
+                                        <li><a href="##">Cincinnati Bengals</a></li>
+                                        <li><a href="##">Cleveland Browns</a></li>
+                                        <li><a href="##">Denver Broncos</a></li>
+                                        <li><a href="##">Houston Texans</a></li>
+                                        <li><a href="##">Baltimore Ravens</a></li>
+                                        <li><a href="##">Buffalo Bills</a></li>
+                                        <li><a href="##">Cincinnati Bengals</a></li>
+                                        <li><a href="##">Cleveland Browns</a></li>
+                                        <li><a href="##">Denver Broncos</a></li>
+                                        <li><a href="##">Houston Texans</a></li>
+                                        <li><a href="##">Baltimore Ravens</a></li>
+                                        <li><a href="##">Buffalo Bills</a></li>
+                                        <li><a href="##">Cincinnati Bengals</a></li>
+                                        <li><a href="##">Cleveland Browns</a></li>
+                                        <li><a href="##">Denver Broncos</a></li>
+                                        <li><a href="##">Houston Texans</a></li>
+                                        <li><a href="##">Baltimore Ravens</a></li>
+                                        <li><a href="##">Buffalo Bills</a></li>
+                                        <li><a href="##">Cincinnati Bengals</a></li>
+                                    </ul>
+                                </div>
+                                <div class="trd_item fl">
+                                    <div class="trd_title">
+                                        NBA
+                                    </div>
+                                    <ul class="trd_cont">
+                                        <li><a href="##">Eastern Conference</a></li>
+                                        <li><a href="##">Western Conference</a></li>
+                                        <li><a href="##">2012 USA Basketball</a></li>
+                                    </ul>
+                                </div>
+                                <div class="trd_item fl">
+                                    <div class="trd_title">
+                                        MLB
+                                    </div>
+                                    <ul class="trd_cont">
+                                        <li><a href="##">National League</a></li>
+                                        <li><a href="##">American League</a></li>
+                                    </ul>
+                                </div>
+                                <div class="trd_item fl">
+                                    <div class="trd_title">
+                                        NHL
+                                    </div>
+                                    <ul class="trd_cont">
+                                        <li><a href="##">Eastern Conference</a></li>
+                                        <li><a href="##">Western Conference</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="trd_right fl">
+                                <a href="##" class="arrivals">
+                                    New Arrivals<i></i>   
+                                </a>
+                                <p class="final"><a href="##">Final Sale<i></i></a></p>
+                                <ul class="arrivallist">
+                                    <li><a href="##">Louis Vuitton</a><i></i></li>
+                                    <li><a href="##">Gucci Handbags</a><i></i></li>
+                                    <li><a href="##">Prada Handbags</a><i></i></li>
+                                    <li><a href="##">Hermes Handbags</a><i></i></li>
+                                    <li><a href="##">Burberry Handbags</a><i></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav_sec_item">
+                        <div class="secitem_tp">
+                            <span>Bags</span>
+                            <i></i>
+                        </div>
+                        <div class="secitem_cont">
+                            <span><a href="##">Luggage</a></span>
+                            <span><a href="##">Boston</a></span>
+                            <span><a href="##">Mayfair</a></span>
+                            <span><a href="##">Birkin</a></span>
+                            <span><a href="##">Monogram</a></span>
+                        </div>
+                        <div class="nav_trd">
+                            <div class="trd_left fl">
+                                <div class="trd_item fl">
+                                    <div class="trd_title">
+                                        NFL
+                                    </div>
+                                    <ul class="trd_cont clearfix">
+                                        <li><a href="##">Baltimore Ravens</a></li>
+                                        <li><a href="##">Buffalo Bills</a></li>
+                                        <li><a href="##">Cincinnati Bengals</a></li>
+                                        <li><a href="##">Cleveland Browns</a></li>
+                                        <li><a href="##">Denver Broncos</a></li>
+                                        <li><a href="##">Houston Texans</a></li>
+                                        <li><a href="##">Baltimore Ravens</a></li>
+                                        <li><a href="##">Buffalo Bills</a></li>
+                                        <li><a href="##">Cincinnati Bengals</a></li>
+                                        <li><a href="##">Cleveland Browns</a></li>
+                                        <li><a href="##">Denver Broncos</a></li>
+                                        <li><a href="##">Houston Texans</a></li>
+                                        <li><a href="##">Baltimore Ravens</a></li>
+                                        <li><a href="##">Buffalo Bills</a></li>
+                                        <li><a href="##">Cincinnati Bengals</a></li>
+                                        <li><a href="##">Cleveland Browns</a></li>
+                                        <li><a href="##">Denver Broncos</a></li>
+                                        <li><a href="##">Houston Texans</a></li>
+                                        <li><a href="##">Baltimore Ravens</a></li>
+                                        <li><a href="##">Buffalo Bills</a></li>
+                                        <li><a href="##">Cincinnati Bengals</a></li>
+                                        <li><a href="##">Cleveland Browns</a></li>
+                                        <li><a href="##">Denver Broncos</a></li>
+                                        <li><a href="##">Houston Texans</a></li>
+                                        <li><a href="##">Baltimore Ravens</a></li>
+                                        <li><a href="##">Buffalo Bills</a></li>
+                                        <li><a href="##">Cincinnati Bengals</a></li>
+                                        <li><a href="##">Cleveland Browns</a></li>
+                                        <li><a href="##">Denver Broncos</a></li>
+                                        <li><a href="##">Houston Texans</a></li>
+                                        <li><a href="##">Baltimore Ravens</a></li>
+                                        <li><a href="##">Buffalo Bills</a></li>
+                                        <li><a href="##">Cincinnati Bengals</a></li>
+                                    </ul>
+                                </div>
+                                <div class="trd_item fl">
+                                    <div class="trd_title">
+                                        NBA
+                                    </div>
+                                    <ul class="trd_cont">
+                                        <li><a href="##">Eastern Conference</a></li>
+                                        <li><a href="##">Western Conference</a></li>
+                                        <li><a href="##">2012 USA Basketball</a></li>
+                                    </ul>
+                                </div>
+                                <div class="trd_item fl">
+                                    <div class="trd_title">
+                                        MLB
+                                    </div>
+                                    <ul class="trd_cont">
+                                        <li><a href="##">National League</a></li>
+                                        <li><a href="##">American League</a></li>
+                                    </ul>
+                                </div>
+                                <div class="trd_item fl">
+                                    <div class="trd_title">
+                                        NHL
+                                    </div>
+                                    <ul class="trd_cont">
+                                        <li><a href="##">Eastern Conference</a></li>
+                                        <li><a href="##">Western Conference</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="trd_right fl">
+                                <a href="##" class="arrivals">
+                                    New Arrivals<i></i>   
+                                </a>
+                                <p class="final"><a href="##">Final Sale<i></i></a></p>
+                                <ul class="arrivallist">
+                                    <li><a href="##">Louis Vuitton</a><i></i></li>
+                                    <li><a href="##">Gucci Handbags</a><i></i></li>
+                                    <li><a href="##">Prada Handbags</a><i></i></li>
+                                    <li><a href="##">Hermes Handbags</a><i></i></li>
+                                    <li><a href="##">Burberry Handbags</a><i></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav_sec_item">
+                        <div class="secitem_tp">
+                            <span>Bags</span>
+                            <i></i>
+                        </div>
+                        <div class="secitem_cont">
+                            <span><a href="##">Luggage</a></span>
+                            <span><a href="##">Boston</a></span>
+                            <span><a href="##">Mayfair</a></span>
+                            <span><a href="##">Birkin</a></span>
+                            <span><a href="##">Monogram</a></span>
+                        </div>
+                        <div class="nav_trd">
+                            <div class="trd_left fl">
+                                <div class="trd_item fl">
+                                    <div class="trd_title">
+                                        NFL
+                                    </div>
+                                    <ul class="trd_cont clearfix">
+                                        <li><a href="##">Baltimore Ravens</a></li>
+                                        <li><a href="##">Buffalo Bills</a></li>
+                                        <li><a href="##">Cincinnati Bengals</a></li>
+                                        <li><a href="##">Cleveland Browns</a></li>
+                                        <li><a href="##">Denver Broncos</a></li>
+                                        <li><a href="##">Houston Texans</a></li>
+                                        <li><a href="##">Baltimore Ravens</a></li>
+                                        <li><a href="##">Buffalo Bills</a></li>
+                                        <li><a href="##">Cincinnati Bengals</a></li>
+                                        <li><a href="##">Cleveland Browns</a></li>
+                                        <li><a href="##">Denver Broncos</a></li>
+                                        <li><a href="##">Houston Texans</a></li>
+                                        <li><a href="##">Baltimore Ravens</a></li>
+                                        <li><a href="##">Buffalo Bills</a></li>
+                                        <li><a href="##">Cincinnati Bengals</a></li>
+                                        <li><a href="##">Cleveland Browns</a></li>
+                                        <li><a href="##">Denver Broncos</a></li>
+                                        <li><a href="##">Houston Texans</a></li>
+                                        <li><a href="##">Baltimore Ravens</a></li>
+                                        <li><a href="##">Buffalo Bills</a></li>
+                                        <li><a href="##">Cincinnati Bengals</a></li>
+                                        <li><a href="##">Cleveland Browns</a></li>
+                                        <li><a href="##">Denver Broncos</a></li>
+                                        <li><a href="##">Houston Texans</a></li>
+                                        <li><a href="##">Baltimore Ravens</a></li>
+                                        <li><a href="##">Buffalo Bills</a></li>
+                                        <li><a href="##">Cincinnati Bengals</a></li>
+                                        <li><a href="##">Cleveland Browns</a></li>
+                                        <li><a href="##">Denver Broncos</a></li>
+                                        <li><a href="##">Houston Texans</a></li>
+                                        <li><a href="##">Baltimore Ravens</a></li>
+                                        <li><a href="##">Buffalo Bills</a></li>
+                                        <li><a href="##">Cincinnati Bengals</a></li>
+                                    </ul>
+                                </div>
+                                <div class="trd_item fl">
+                                    <div class="trd_title">
+                                        NBA
+                                    </div>
+                                    <ul class="trd_cont">
+                                        <li><a href="##">Eastern Conference</a></li>
+                                        <li><a href="##">Western Conference</a></li>
+                                        <li><a href="##">2012 USA Basketball</a></li>
+                                    </ul>
+                                </div>
+                                <div class="trd_item fl">
+                                    <div class="trd_title">
+                                        MLB
+                                    </div>
+                                    <ul class="trd_cont">
+                                        <li><a href="##">National League</a></li>
+                                        <li><a href="##">American League</a></li>
+                                    </ul>
+                                </div>
+                                <div class="trd_item fl">
+                                    <div class="trd_title">
+                                        NHL
+                                    </div>
+                                    <ul class="trd_cont">
+                                        <li><a href="##">Eastern Conference</a></li>
+                                        <li><a href="##">Western Conference</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="trd_right fl">
+                                <a href="##" class="arrivals">
+                                    New Arrivals<i></i>   
+                                </a>
+                                <p class="final"><a href="##">Final Sale<i></i></a></p>
+                                <ul class="arrivallist">
+                                    <li><a href="##">Louis Vuitton</a><i></i></li>
+                                    <li><a href="##">Gucci Handbags</a><i></i></li>
+                                    <li><a href="##">Prada Handbags</a><i></i></li>
+                                    <li><a href="##">Hermes Handbags</a><i></i></li>
+                                    <li><a href="##">Burberry Handbags</a><i></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <ul class="fl nav_right">
+                <li class="fl"><a href="##"><span>天猫</span></a></li>
+                <li class="fl"><a href="##"><span>天猫超市</span></a></li>
+                <li class="fl"><a href="##"><span>聚划算</span></a></li>
+                <li class="fl"><a href="##"><span class="brands"><i></i>淘抢购</span></a></li>
+                <li class="fl"><a href="##"><span class="albums"><i></i>天猫</span></a></li>
+            </ul>
+        </div>
+    </nav>
+    <main id="mains">
+        <div class="container clearfixed">
+            <div class="mainHead" id="header">
+                <i class="home"></i>
+                <span class="s1"><a href="#">首页</a></span>
+                <i class="i1"></i>
+                <span class="s1"><a href="index.html">女装/女士精品</a></span>
+                <i class="i1"></i>
+                <span class="s1"><a href="#">连衣裙</a></span>
+                <i class="i1"></i>
+            </div>
+            <div class="mainBody1">
+                <div class="body1Top">
+                    <div class="mainBodyTop">
+                        <span>服装</span>
+                    </div>
+                    <div class="d2">
+                        <ul class="u1">
+                            <span><i></i>女装</span>
+                            <li><i></i><a href="#">连衣裙</a></li>
+                            <li><i></i><a href="#">时尚套装</a></li>
+                            <li><i></i><a href="#">明星同款</a></li>
+                        </ul>
+                        <ul class="u1">
+                            <span><i></i>男装</span>
+                            <li><i></i><a href="#">T恤</a></li>
+                            <li><i></i><a href="#">精品套装</a></li>
+                            <li><i></i><a href="#">明星同款</a></li>
+                            <li><i></i><a href="#">潮男必备</a></li>
+                        </ul>
+                        <ul class="u1">
+                            <span><i></i>内衣</span>
+                            <li><i></i><a href="#">性感文胸</a></li>
+                            <li><i></i><a href="#">保暖内衣</a></li>
+                            <li><i></i><a href="#">纯棉睡衣</a></li>
+                            <li><i></i><a href="#">披巾</a></li>
+                            <li><i></i><a href="#">卡通睡衣</a></li>
+                            <li><i></i><a href="#">秋裤</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="body1botm">
+                    <ul id="mainBodyU1">
+                    </ul>
+                </div>                
+            </div>
+            <div class="mainBody2">
+                <div class="mainBody2Top">
+                    <span class="s1">排序:</span>
+                    <a href="#" class="a2">Date <i></i></a>
+                    <a href="#" class="a3">Price <i></i></a>
+                    <a href="#" class="a2 a4">Price <i></i></a>
+                    <div class="d1">
+                    <i class="i1"></i>
+                    <span class="ss">
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                    </span>
+                    <i class="i2"></i>
+                    </div>
+                </div>
+                <div class="goods">
+                    <ul class="goodsUl clearfixed"></ul>
+                </div>
+                <div class="d1">
+                    <i class="i1"></i>
+                    <span class="ss">
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                    </span>
+                    <i class="i2"></i>
+                </div>
+            </div>
+        </div>
+        <div class="toTop"></div>
+    </main>
+    <footer>        
+        <div class="container clear">
+            <div class="top clear">
+                <div class="links fl clear">
+                    <dl>
+                        <dt>Customer Service</dt>
+                        <a href="#"><dd>Shopping Guide</dd></a>
+                        <a href="#"><dd>return policy</dd></a>
+                        <a href="#"><dd>FAQ</dd></a>
+                        <a href="#"><dd>Shipping</dd></a>
+                        <a href="#"><dd>Contact Us</dd></a>  
+                    </dl>
+                    <dl>
+                        <dt>Customer Service</dt>
+                        <a href="#"><dd>Shopping Guide</dd></a>
+                        <a href="#"><dd>return policy</dd></a>
+                        <a href="#"><dd>FAQ</dd></a>
+                        <a href="#"><dd>Shipping</dd></a>
+                    </dl>
+                    <dl>
+                        <dt>Customer Service</dt>
+                        <a href="#"><dd>Shopping Guide</dd></a>
+                        <a href="#"><dd>Shipping</dd></a>
+                        <a href="#"><dd>Contact Us</dd></a>  
+                    </dl>
+                    <dl class="last">
+                        <dt>Customer Service</dt>
+                        <a href="#"><i></i><span>Add us</span><dd>Shopping Guide</dd></a>
+                        <a href="#"><i></i><span>Follow us</span><dd>return policy</dd></a>
+                        <a href="#"><i></i><span>Read us</span><dd>Contact Us</dd></a>  
+                    </dl>
+                </div>
+                <div class="footer_right fr">
+                    <p>Enter your Email AddressEnter your Email Address</p>
+                    <form action="">
+                        <input type="text" placeholder="Enter your Email Address" class="text" />
+                        <input type="submit" value=""  class="sub" />
+                    </form>
+                </div>
+            </div>
+            <p class="p_one">
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+            </p>
+            <p><i class="icon-shangbiao iconfont"></i>2008-2013 <a href="#">outslwsssw.com</a>  All Rights Reaserved</p>
+        </div>
+    </footer>
+
+</body>
+</html>

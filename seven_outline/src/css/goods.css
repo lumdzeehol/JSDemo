@@ -1,0 +1,514 @@
+*{margin:0;padding:0;}
+ul,li{list-style:none;}
+a{text-decoration:none;}
+.clearfixed::after{
+    content:"";
+    height:0;
+    clear:both;
+    display:block;
+    overflow:hidden;
+    visibility:hidden;
+}
+.container{
+    width:980px;
+    min-width:980px;
+    margin:0 auto;
+}
+/*#mains{
+    height:700px;
+}*/
+#mains .mainHead{
+    height:30px;
+    line-height: 30px;
+    overflow:hidden;
+}
+#mains .mainHead .home{
+    display:block;
+    float:left;
+    margin-top:5px;
+    width:24px;
+    height:17px;
+    background:url("../images/main.fw.png");
+}
+#mains .mainHead .i1{
+    display:inline-block;
+    width:13px;
+    height:13px;
+    background:url("../images/main.fw.png") -30px 0;
+}
+#mains .mainHead .s1 a{
+    color:#333;
+    font-size:14px;
+}
+#mains #goodsDetail{
+    border:1px solid #ccc;
+}
+#mains #goodsDetail .mainLeft{
+    width:400px;
+    float:left;
+}
+#mains #goodsDetail .mainLeft #imgurl{
+    display:block;
+    width:380px;
+    height:380px;
+    margin-right:20px;
+}
+#mains #goodsDetail .mainLeft ul{
+    margin-top:10px;
+}
+#mains #goodsDetail .mainLeft ul li{
+    float:left;
+    width:70px;
+    height:70px;
+    margin-right:3px;
+    border:2px solid #fff;
+}
+#mains #goodsDetail .mainLeft ul li.changeC{
+    border:2px solid orange;
+}
+#mains #goodsDetail .mainLeft ul li img{
+    width:100%;
+}
+#mains #goodsDetail .mainRight{
+    width:370px;
+    float:left;
+}
+#mains #goodsDetail .mainRight h4{
+    font-size:18px;
+    line-height: 22px;
+    background:-webkit-gradient(linear,100% 0,100% 90%,from(#e2e2e2),to(#fff));
+    border-radius:2px;
+}
+#mains #goodsDetail .mainRight .fly{
+    width:206px;
+    height:33px;
+    background:url("../images/p_goods.fw.png");
+    margin:15px 0 15px 5px;
+}
+#mains #goodsDetail .mainRight .priceBox{
+    border-left:1px solid #ccc;
+    border-top:1px solid #ccc;
+    width:360px;
+    margin-left:5px;
+    position:relative;
+}
+#mains #goodsDetail .mainRight .priceBox li{
+    width:360px;
+    height:30px;
+    line-height: 30px;
+    border-bottom:1px solid #ddd;
+    font-size:14px;
+}
+#mains #goodsDetail .mainRight .priceBox li:nth-child(1){
+    background:-webkit-gradient(linear,100% 0,100% 100%,from(#fff),to(#e2e2e2));
+    font-size:16px;
+    font-weight:bold;
+}
+#mains #goodsDetail .mainRight .priceBox li:nth-child(3),#mains #goodsDetail .mainRight .priceBox li:nth-child(5){
+    background:#f5f5f5;
+}
+#mains #goodsDetail .mainRight .priceBox li:nth-child(1) span:nth-child(4){
+    color:#000;
+}
+#mains #goodsDetail .mainRight .priceBox li span{
+    padding-left:5px;
+    height:30px;
+    display:block;
+    float:left;
+    border-right:1px solid #ddd;
+}
+#mains #goodsDetail .mainRight .priceBox li span:nth-child(1){
+    width:55px;
+}
+#mains #goodsDetail .mainRight .priceBox li span:nth-child(2){
+    width:43px;
+}
+#mains #goodsDetail .mainRight .priceBox li span:nth-child(3){
+    width:170px;
+}
+#mains #goodsDetail .mainRight .priceBox li span:nth-child(4){
+    width:68px;
+    color:red;
+}
+#mains #goodsDetail .mainRight .priceBox .priceBox_1{
+    width:60px;
+    height:62px;
+    background:#f5f5f5;
+    position:absolute;
+    left:0;
+    bottom:1px;
+    font-size:13px;
+    padding-top:30px;
+}
+#mains #goodsDetail .mainRight .priceBoxUnder1{
+    width:345px;
+    height:41px;
+    border-radius:6px 6px 0 0;
+    margin-left:5px;
+    margin-top:10px;
+    font-size:14px;
+    padding-top:10px;
+    padding-left:15px;
+    background:#DFDFDF;
+    
+}
+#mains #goodsDetail .mainRight .priceBoxUnder1 span{
+    color:red;
+}
+#mains #goodsDetail .mainRight .priceBoxUnder2{
+    width:360px;
+    height:76px;
+    margin-left:5px;
+    background:url("../images/p_goods.fw.png") 0 -50px;
+}
+#mains #goodsDetail .mainRight .priceBoxUnder1 p{
+    line-height: 20px;
+}
+#mains #goodsDetail .mainRight .size{
+    height:22px;
+    margin:14px 0 14px 6px;
+    font-size:15px;
+}
+#mains #goodsDetail .mainRight .size span{
+    display:block;
+    float:left;
+    height:22px;
+    line-height:22px;
+}
+#mains #goodsDetail .mainRight .size ul{
+    display:inline-block;
+}
+#mains #goodsDetail .mainRight .size li{
+    float:left;
+    width:36px;
+    height:20px;
+    font-size:14px;
+    border:1px solid #ccc;
+    line-height: 20px;
+    text-align:center;
+    margin:0 6px;
+}
+#mains #goodsDetail .mainRight .size li:hover{
+    cursor:pointer;
+}
+#mains #goodsDetail .mainRight .size li:nth-child(2){
+    border:1px solid orange;
+    color:red;
+}
+#mains #goodsDetail .mainRight .color{
+    height:22px;
+    margin-left:6px;
+    padding-bottom:20px;
+    border-bottom:2px dotted #ccc;
+    font-size:15px;
+}
+#mains #goodsDetail .mainRight .color span{
+    display:block;
+    float:left;
+    height:22px;
+    line-height:22px;
+}
+#mains #goodsDetail .mainRight .color ul{
+    display:inline-block;
+}
+#mains #goodsDetail .mainRight .color li{
+    float:left;
+    width:50px;
+    height:20px;
+    font-size:14px;
+    border:1px solid #ccc;
+    line-height: 20px;
+    text-align:center;
+    margin:0 6px;
+}
+#mains #goodsDetail .mainRight .color li:hover{
+    cursor:pointer;
+}
+#mains #goodsDetail .mainRight .color li:nth-child(2){
+    border:1px solid orange;
+    color:red;
+}
+#mains #goodsDetail .mainRight .buyCar{
+    width:360px;
+    height:100px;
+    padding:5px;
+    padding-top:15px;
+    background:-webkit-gradient(linear,100% 0,100% 40%,from(#e2e2e2),to(#fff));
+    margin-top:3px;
+}
+#mains #goodsDetail .mainRight .buyCar .qtyBtn{
+    display:inline-block;
+    width:136px;
+    height:29px;
+    padding-top:10px;
+    font-size:14px;
+}
+#mains #goodsDetail .mainRight .buyCar .price{
+    display:block;
+    height:30px;
+    line-height:30px;
+    font-size:14px;
+}
+#mains #goodsDetail .mainRight .buyCar .price .s1{color:red;}
+#mains #goodsDetail .mainRight .qtyBtn #qty{
+    width:60px;
+    height:20px;
+}
+#mains #goodsDetail .mainRight .buyCarBtn{
+    display:block;
+    float:right;
+    width:182px;
+    height:39px;
+    border-radius:2px;
+    background:url("../images/main.fw.png") -80px -90px;
+    position:relative;
+}
+#mains #goodsDetail .mainRight .buyCarBtn .CarBtnIn{
+    position:absolute;
+    left:40px;
+    bottom:-26px;
+    display:block;
+    width:110px;
+    height:20px;
+    border:1px solid #ccc;
+    border-radius:3px;
+    display:none;
+}
+#mains #goodsDetail .mainRight .buyCarBtn .CarBtnIn i{
+    display:block;
+    float:left;
+    width:20px;
+    height:20px;
+}
+#mains #goodsDetail .mainRight .buyCarBtn .CarBtnIn span{
+    display:block;
+    float:left;
+    height:20px;
+    line-height: 20px;
+}
+#mains #goodsDetail .mainRight .buyCarBtn .CarBtnIn i img{
+    width:100%;
+    display:block;
+}
+#mains #goodsDetail .mainRight .buyCarBtn:hover{
+    cursor:pointer;
+}
+#mains #goodsDetail .mainOut{
+    width:208px;
+    float:left;
+}
+#mains #goodsDetail .mainOut .Stock{
+    height:63px;
+    border-bottom:1px dotted #ccc;
+}
+#mains #goodsDetail .mainOut .Stock p{
+    font-size:20px;
+    color:#228B22;
+    line-height:36px;
+    text-align:center;
+}
+#mains #goodsDetail .mainOut .Stock span {
+    color: orange;
+    padding-left: 20px;
+}
+#mains #goodsDetail .mainOut .Stock span i:last-child {
+    color: #ccc;
+}
+#mains #goodsDetail .mainOut .Stock .total{
+    color: #000;
+}
+#mains #goodsDetail .mainOut .Stock .total strong {
+    color: blue;
+    text-decoration: underline;
+    font-weight: normal;
+}
+#mains #goodsDetail .mainOut .StockUnder .s1{
+    display:block;
+    height:20px;
+    padding-top:10px;
+}
+#mains #goodsDetail .mainOut .StockUnder .s1 .i1{
+    width:18px;
+    height:18px;
+    display:block;
+    float:left;
+    background:url("../images/dl_icon.fw.png");
+    margin-left:15px;
+}
+#mains #goodsDetail .mainOut .StockUnder .s1 .i2{
+    width:18px;
+    height:18px;
+    display:block;
+    float:left;
+    background:url("../images/dl_icon.fw.png") 0 -18px;
+    margin-left:18px;
+    margin-right:15px;
+}
+#mains #goodsDetail .mainOut .StockUnder .s1 button{
+    display:block;
+    float:left;
+    color:#ddd;
+    height:18px;
+    background:#F8F8F8;
+    border:1px solid #bbb;
+    border-radius:2px;
+}
+#mains #goodsDetail .mainOut .StockUnder .i3{
+    display:inline-block;
+    width:18px;
+    height:18px;
+    background:url("../images/accounticon.fw.png") 0 -208px;
+}
+#mains #goodsDetail .mainOut .StockUnder .i4{
+    display:inline-block;
+    width:18px;
+    height:18px;
+    background:url("../images/accounticon.fw.png") 0 -169px;
+}
+#mains #goodsDetail .mainOut .StockUnder .i5{
+    display:inline-block;
+    width:18px;
+    height:18px;
+    background:url("../images/accounticon.fw.png") 0 -188px;
+}
+#mains #goodsDetail .mainOut .StockUnder p{
+    font-size:14px;
+    line-height: 30px;
+    padding-left:15px;
+}
+#mains #goodsDetail .mainOut .StockUnder p:first-of-type{
+    margin-top:10px;
+}
+#mains #goodsDetail .mainOut .StockUnder p a{
+    font-size:14px;
+    color:#000;
+}
+#mains #goodsDetail .mainOut .StockUnder .StockUPic{
+    width:140px;
+    height:190px;
+    background:url("../images/p_goods.fw.png") 0 -140px;
+}
+#mains .TabCut{
+    width:964px;
+    padding-left:5px;
+    padding-right:5px;
+    height:230px;
+    border:3px solid #ccc;
+    margin-top:16px;
+}
+#mains .TabCut header{
+    background:#fff;
+    height:32px;
+    padding-top:6px;
+    border-bottom:1px solid #ccc;
+}
+#mains .TabCut header span{
+    font-size:16px;
+    display:block;
+    float:left;
+    margin-right:30px;
+    padding-left:20px;
+}
+#mains .TabCut header span:first-child{
+    font-size:18px;
+    font-weight:bold;
+    line-height:26px;
+}
+#mains .TabCut header .tabss{
+    float:left;
+}
+#mains .TabCut header .tabss .selected{
+    border:1px solid #ccc;
+    border-bottom:1px solid #fff;
+}
+#mains .TabCut header .tabss li{
+    display:block;
+    float:left;
+    width:64px;
+    height:30px;
+    font-size:15px;
+    line-height: 30px;
+    margin-top:1px;
+    text-align:center;
+}
+#mains .TabCut #tabsBox .selectedBox{
+    display:block;
+}
+#mains .tabs{
+    display:none;
+    padding-top:10px;
+    padding-left:30px;
+}
+#mains .tabs .icon1{
+    display:block;
+    float:left;
+    width:27px;
+    height:27px;
+    background:url("../images/p_goods.fw.png") -230px 0;
+    margin:50px 25px 0 30px;
+}
+#mains .tabs li{
+    float:left;
+    width:166px;
+    font-size:12px;
+}
+#mains .tabs li p{
+    line-height:18px;
+}
+#mains .tabs li .tabPrice{
+    color:red;
+    font-size:14px;
+}
+#mains .tabs li img{
+    width:120px;
+    height:120px;
+}
+#mains .tabs .lastLi{
+    float:right;
+    width:230px;
+    margin-right:30px;
+}
+#mains .tabs .lastLi>span{
+    display:block;
+    float:left;
+    width:30px;
+    height:27px;
+    background:url("../images/p_goods.fw.png") -280px 0;
+    margin-right:18px;
+    margin-top:55px;
+}
+#mains .tabs .lastLi div{
+    float:left;
+    height:100%;
+}
+#mains .tabs .lastLi div p{
+    font-size:14px;
+    line-height: 26px;
+}
+#mains .tabs .lastLi div p:nth-child(2){
+    color:#c73434;
+}
+#mains .tabs .lastLi div p:nth-child(3){
+    font-size:24px;
+    color:#cc0808;
+    line-height: 34px;
+    font-weight:bold;
+}
+#mains .tabs .lastLi div p:nth-child(4){
+    color:#58cc58;
+}
+#mains .tabs .lastLi div span{
+    display:block;
+    width:182px;
+    height:32px;
+    background:url("../images/p_goods.fw.png") -340px 0;
+}
+#mains .toTop{
+    width:50px;
+    height:164px;
+    position:fixed;
+    right:70px;
+    top:110px;
+    background:url("../images/main.fw.png") 0 -30px;
+}
+
