@@ -34,6 +34,8 @@ a {
 /*-----------nav----------*/
 nav {
     background-color: #2B2B2B;
+    position: relative;
+    z-index: 10;
 }
 nav .container {
     height: 30px;
