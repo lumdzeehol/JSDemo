@@ -287,7 +287,7 @@ var Cookie = {
 function initNav(){
     var nav_sec_items = document.querySelectorAll('.nav_sec_item');
     var nav_trd_items = document.querySelectorAll('.nav_trd');
-         
+
     for(let i = 0; i < nav_sec_items.length ; i++){
         nav_sec_items[i].onmouseenter = function(){
             nav_sec_items[i].className = 'nav_sec_item_on';
@@ -296,11 +296,20 @@ function initNav(){
                 // var a_arr = nav_sec_items[i].children[j].querySelectorAll('a');
                 // a_arr.style.color = '#C5CFCF';
                 // console.log(nav_sec_items[i].children[j].querySelectorAll('a'));
-                     
+                var nav_trd_item = nav_sec_items[i].querySelector('.nav_trd');
+                animate(nav_trd_item,{top:0});
             }
         }
         nav_sec_items[i].onmouseleave = function(){
-            nav_sec_items[i].className = 'nav_sec_item';
+            	nav_sec_items[i].className = 'nav_sec_item';
+            	for(var j = 1;j<nav_sec_items[i].children.length; j++){
+            	    // nav_sec_items[i].children[j].querySelector('a').style.color = '#C5CFCF';
+            	    // var a_arr = nav_sec_items[i].children[j].querySelectorAll('a');
+            	    // a_arr.style.color = '#C5CFCF';
+            	    // console.log(nav_sec_items[i].children[j].querySelectorAll('a'));
+            	    var nav_trd_item = nav_sec_items[i].querySelector('.nav_trd');
+            	    nav_trd_item.style.top = ''; 
+            	}
 
         }
     }
@@ -317,7 +326,7 @@ function lz_loadCar(){
         carlist = JSON.parse(Cookie.get('cartlist'));
     }
     // console.log(carlist);
-         
+
     var total = 0;
     var lis = '';
     for(var i = 0;i < carlist.length;i++){
@@ -339,11 +348,11 @@ function lz_loadCar(){
         lis += str;
         total += carlist[i].qty*sellPrice;
     }
-         
+
     /*lis += '<h3>Subtotal:<strong>$'+total+'</strong></h3><input type="submit" value="Checkout" />';*/
     var ul = document.getElementsByClassName('list2')[0];
     ul.innerHTML = lis;
-    console.log(ul);
+   
     var item_num = ul.parentNode.parentNode.children[1];
     var totalprice = ul.parentNode.parentNode.children[2];
     var totalBottom = ul.nextElementSibling.children[0];
@@ -359,7 +368,7 @@ function lz_loadCar_index(){
         carlist = JSON.parse(Cookie.get('cartlist'));
     }
     // console.log(carlist);
-         
+
     var total = 0;
     var lis = '';
     for(var i = 0;i < carlist.length;i++){
@@ -382,11 +391,10 @@ function lz_loadCar_index(){
         lis += str;
         total += carlist[i].qty*sellPrice;
     }
-         
+
     /*lis += '<h3>Subtotal:<strong>$'+total+'</strong></h3><input type="submit" value="Checkout" />';*/
     var ul = document.getElementsByClassName('list2')[0];
     ul.innerHTML = lis;
-    console.log(ul);
     var item_num = ul.parentNode.parentNode.children[1];
     var totalprice = ul.parentNode.parentNode.children[2];
     var totalBottom = ul.nextElementSibling.children[0];
@@ -397,7 +405,7 @@ function lz_loadCar_index(){
     totalBottom.innerHTML = ' $' + total;
 }
 
-// function 
+// function
 
 function animate(ele,opt,callback){
     var clearcount = 0;
@@ -408,7 +416,7 @@ function animate(ele,opt,callback){
         createTimer(attr);
 
     }
-    
+
     function createTimer(attr){
         // 根据属性定义定时器名字
         var timerName = attr + 'timer';
@@ -436,21 +444,23 @@ function animate(ele,opt,callback){
 
             // 针对opacity属性计算速度
             if(attr === 'opacity'){
-                speed = speed>0 ? 0.01 : -0.01;
-            }                                
+                speed = speed>0 ? 0.05 : -0.05;
+            }
 
             // 到达目标值后清除动画定时器
             if(current === target || speed === 0){
-                console.log(ele[timerName]);
-                     
+                
+
                 clearInterval(ele[timerName]);
 
                 // 重置目标值
                 current = target - speed;
-                console.log(ele[timerName]);
+                
                 clearcount++;
                 if (clearcount === len) {
-                    callback();
+                	if (typeof callback === 'function') {
+                    	callback();
+                	}
                 }
 
                 // 执行回调函数

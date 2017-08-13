@@ -208,7 +208,7 @@ var lis=arr2.map(function(item){
 //返回顶部按钮和吸顶菜单
 function toTop1(){
     var topSearch = document.getElementById("topSearch");
-    var toTop=document.getElementsByClassName('toTop')[0];   
+    var toTop=document.getElementsByClassName('toTop')[0];
     toTop.onclick=function(){
         var timer=setInterval(function(){
             scrollBy(0,-50);
@@ -221,9 +221,20 @@ function toTop1(){
         if(scrollY>150){
             toTop.style.display = "block";
             topSearch.style.display="block";
+            var nav = document.querySelector('.nav_left');
+            var nav_sec = nav.querySelector('.nav_sec');
+            nav.style.position = 'fixed';
+            nav.style.top = 38+'px';
+            nav_sec.style.display = 'block';
         }else{
             toTop.style.display = "none";
             topSearch.style.display="none";
+            var nav = document.querySelector('.nav_left');
+            var nav_sec = nav.querySelector('.nav_sec');
+            nav.style.position = 'relative';
+            nav.style.top = '';
+            nav_sec.style.display = '';
+            // nav_sec.
         }
     }
 }

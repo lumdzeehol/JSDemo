@@ -8,23 +8,18 @@
     <link rel="stylesheet" type="text/css" href="css/public.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/real_index.css">
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/real_index.js"></script>
     <script type="text/javascript">
     window.onload=function(){
-        //侧边栏下方商品列表
-        inUl1();
-        //主商品列表
-        inUl2();
         //返回顶部按钮和吸顶菜单
         toTop1();
-        //价格从高到低排序
-        priceUp();
-        // 价格从低到高排序
-        priceDown();
         initNav();
         //顶部购物车
         lz_loadCar_index();
+        banner_autoPlay();
     }
     </script>
 </head>
@@ -684,79 +679,20 @@
     </nav>
     <main id="mains">
         <div class="container clearfixed">
-            <div class="mainHead" id="header">
-                <i class="home"></i>
-                <span class="s1"><a href="#">首页</a></span>
-                <i class="i1"></i>
-                <span class="s1"><a href="index.html">女装/女士精品</a></span>
-                <i class="i1"></i>
-                <span class="s1"><a href="#">连衣裙</a></span>
-                <i class="i1"></i>
-            </div>
-            <div class="mainBody1">
-                <div class="body1Top">
-                    <div class="mainBodyTop">
-                        <span>服装</span>
-                    </div>
-                    <div class="d2">
-                        <ul class="u1">
-                            <span><i></i>女装</span>
-                            <li><i></i><a href="#">连衣裙</a></li>
-                            <li><i></i><a href="#">时尚套装</a></li>
-                            <li><i></i><a href="#">明星同款</a></li>
-                        </ul>
-                        <ul class="u1">
-                            <span><i></i>男装</span>
-                            <li><i></i><a href="#">T恤</a></li>
-                            <li><i></i><a href="#">精品套装</a></li>
-                            <li><i></i><a href="#">明星同款</a></li>
-                            <li><i></i><a href="#">潮男必备</a></li>
-                        </ul>
-                        <ul class="u1">
-                            <span><i></i>内衣</span>
-                            <li><i></i><a href="#">性感文胸</a></li>
-                            <li><i></i><a href="#">保暖内衣</a></li>
-                            <li><i></i><a href="#">纯棉睡衣</a></li>
-                            <li><i></i><a href="#">披巾</a></li>
-                            <li><i></i><a href="#">卡通睡衣</a></li>
-                            <li><i></i><a href="#">秋裤</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="body1botm">
-                    <ul id="mainBodyU1">
+            <div class="main">
+                <div id="banner">
+                    <ul class="imglist">
+                        <li><img src="images/banner1.jpg" alt=""></li>
+                        <li><img src="images/banner2.jpg" alt=""></li>
+                        <li><img src="images/banner3.jpg" alt=""></li>
+                        <li><img src="images/banner4.jpg" alt=""></li>
                     </ul>
-                </div>
-            </div>
-            <div class="mainBody2">
-                <div class="mainBody2Top">
-                    <span class="s1">排序:</span>
-                    <a href="#" class="a2">Date <i></i></a>
-                    <a href="#" class="a3">Price <i></i></a>
-                    <a href="#" class="a2 a4">Price <i></i></a>
-                    <div class="d1">
-                    <i class="i1"></i>
-                    <span class="ss">
-                        <a href="#">1</a>
-                        <a href="#">2</a>
-                        <a href="#">3</a>
-                        <a href="#">4</a>
-                    </span>
-                    <i class="i2"></i>
-                    </div>
-                </div>
-                <div class="goods">
-                    <ul class="goodsUl clearfixed"></ul>
-                </div>
-                <div class="d1">
-                    <i class="i1"></i>
-                    <span class="ss">
-                        <a href="#">1</a>
-                        <a href="#">2</a>
-                        <a href="#">3</a>
-                        <a href="#">4</a>
-                    </span>
-                    <i class="i2"></i>
+                    <ul class="pagecontrol">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
                 </div>
             </div>
         </div>
