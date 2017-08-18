@@ -224,8 +224,9 @@ function toTop1(){
             var nav = document.querySelector('.nav_left');
             var nav_sec = nav.querySelector('.nav_sec');
             nav.style.position = 'fixed';
-            nav.style.top = 38+'px';
+            nav.style.top = 0+'px';
             nav_sec.style.display = 'block';
+
         }else{
             toTop.style.display = "none";
             topSearch.style.display="none";
