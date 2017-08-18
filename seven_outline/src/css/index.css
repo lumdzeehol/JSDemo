@@ -193,7 +193,6 @@ nav .nav_right .albums {
     background-color: #404040;
     position: absolute;
     right: -580px;    /*top:0;*/
-    z-index: 999;
 }
 .trd_left {
     width: 409px;
