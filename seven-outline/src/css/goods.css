@@ -46,6 +46,44 @@ a{text-decoration:none;}
 #mains #goodsDetail .mainLeft{
     width:400px;
     float:left;
+    position:relative;
+}
+#mains #goodsDetail .mainLeft .picFly{
+    position:absolute;
+    right:20px;
+    bottom:80px;
+    width:380px;
+    height:380px;
+    animation:xuanzhuan .5s linear infinite;
+}
+@keyframes xuanzhuan{
+    0%{}
+    100%{transform:rotate(360deg);}
+}
+#mains #goodsDetail .mainLeft .picShowBox{
+    height:68px;
+    width:355px;
+    overflow:hidden;
+    margin-left:20px;
+    margin-top:10px;
+    position:relative;
+}
+#mains #goodsDetail .mainLeft .pic_btn{
+    position:absolute;
+    display:block;
+    width:12px;
+    height:33px;
+    background:url("../images/shop_car_loc_arrow.png");
+    cursor:pointer;
+}
+#mains #goodsDetail .mainLeft .p_prev{
+    transform:rotate(180deg);
+    left:5px;
+    top:406px;
+}
+#mains #goodsDetail .mainLeft .p_next{
+    top:406px;
+    right:10px;
 }
 #mains #goodsDetail .mainLeft #imgurl{
     display:block;
@@ -54,12 +92,15 @@ a{text-decoration:none;}
     margin-right:20px;
 }
 #mains #goodsDetail .mainLeft ul{
-    margin-top:10px;
+    width:710px;
+    position:absolute;
+    left:0;
+    top:0;
 }
 #mains #goodsDetail .mainLeft ul li{
     float:left;
-    width:70px;
-    height:70px;
+    width:64px;
+    height:64px;
     margin-right:3px;
     border:2px solid #fff;
 }

@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-08-05 14:24:56
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-08-07 14:55:15
+* @Last Modified time: 2017-08-21 20:59:52
 */
 #shopCar{
 
@@ -194,7 +194,10 @@
 
 
 .hotitems{
+    width: 980px;
     height: 265px;
+    position: relative;
+    overflow: hidden;
 }
 .hotitems>p:nth-of-type(1){
     line-height: 50px;
@@ -202,8 +205,36 @@
     font-weight: bold;
     padding-left: 10px;
 }
+/*更改 梁嫚嫚*/
+/*方向按钮*/
+.hotitems button {
+    position: absolute;
+    display: block;
+    width: 13px;
+    height: 33px;
+    top: 50%;
+    margin-top: -16px;
+    border: none;
+    z-index: 4;
+    outline: none;
+}
+
+.hotitems .hot_prev {
+    left:0;
+    background: url(../images/arrival_btnp.png) no-repeat;
+}
+.hotitems .hot_next {
+    right: 0;
+    background: url(../images/arrival_btnn.png) no-repeat;
+}
 .hot_list{
-    padding-left: 11px;
+    /*width: 954px;*/
+    width: 1908px;
+    height: 215px;
+    position: absolute;
+    left: 0px;
+    top: 50px;
+    padding-left: 26px;
 }
 .hotlist_item{
     width: 150px;
@@ -230,7 +261,7 @@
     color:#FF4500;
 }
 .hotlist_item button{
-    margin-top: 3px;
+    margin-top: 76px;
     height:16px;
     width: 73px;
     border: 0 none;

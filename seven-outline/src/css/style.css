@@ -1,0 +1,393 @@
+/* 
+* @Author: lmm
+* @Date:   2017-08-12 10:45:15
+* @Last Modified by:   Marte
+* @Last Modified time: 2017-08-21 20:23:13
+*/
+a{
+    text-decoration: none;
+}
+
+/*主要内容部分*/
+.main_l {
+    height: 2409px;
+}
+.main_l .container {
+    height: 2409px;
+}
+/*左边留白*/
+.main_l .container .leftkong {
+    width: 210px;
+    height: 100%;
+    background-color: yellow;
+}
+/*右边*/
+.main_l .container .right {
+    /*padding-left: 210px;*/
+    width: 770px;
+    height: 100%;    
+}
+.main_l .toTop_index{
+    width:50px;
+    height:164px;
+    position:fixed;
+    right:70px;
+    top:70px;
+    display:none;
+    background:url("../images/main.fw.png") 0 -30px;
+}
+/*该部分空为林志灏做*/
+.right .toplinzhihao {
+    height: 849px;
+    background-color: #ccc;
+}
+/* banner轮播 */
+#banner {
+    width: 100%;
+    height: 340px;
+    position: relative;
+    z-index: 0;
+}
+.imglist {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.imglist li {
+    position: absolute;
+    left: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+.imglist img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+/* 换页 */
+.pagecontrol {
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
+    width: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+.pagecontrol li {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.banner_bottom{
+    width: 100%;
+    height: 36px;
+}
+.banner_bottom img{
+    display: block;
+    width: 100%;
+}
+
+/* 品牌墙 */
+.brandwall{
+    display: flex;
+    justify-content: space-between;
+    background-color: #EFEFEF;
+    flex-wrap: wrap;
+    height: 280px;
+    width: 100%;
+    padding-top: 5px;
+    padding-left: 5px;
+    box-sizing: border-box;
+    position: relative;
+    /*z-index: -1;*/
+}
+.brandcell{
+    /*z-index: -1;*/
+    position: relative;
+    width: 147px;
+    height: 132px;
+    background-color: #fff;
+    margin-right: 5px;
+    overflow: hidden;
+}
+.brandcell img{
+    display: block;
+    width: 100%;
+}
+.brandcell .mask_border{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 147px;
+    height: 132px;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, .5);
+    border-bottom: 0 none;
+    display: none;
+}
+.brandcell .mask{
+    position: absolute;
+    left: 0;
+    bottom: -45px;
+    /*top: 0;*/
+    width: 147px;
+    height: 45px;
+    background-color: rgba(0, 0, 0, .7);
+}
+.brandcell .mask p{
+    color: #fff;
+    font-size: 12px;
+}
+.brandcell .mask p:first-child{
+    color: orange;
+    font-weight: bold;
+}
+
+.staffPicks{
+    height:200px;
+    border-left:5px solid #EFEFEF;
+    background:-webkit-gradient(linear,100% 0,100% 57%,from(#E0E8EE),to(#F9FAFA));
+    padding-left:10px;
+}
+.staffPicks h3{
+    line-height:60px;
+    font-size:14px;
+}
+.staffPicks li{
+    width:375px;
+    height:130px;
+    float:left;
+}
+.staffPicks li img{
+    display:inline-block;
+    width:130px;
+    float:left;
+}
+.staffPicks li p:nth-child(2){
+    font-size:14px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+.staffPicks li p:nth-child(3),.staffPicks li p:nth-child(4){
+    line-height: 20px;
+    font-size:14px;
+}
+.staffPicks li span{
+    color:red;
+}
+/*该部分为梁嫚嫚做*/
+.index_goods {
+    height: 1560px;
+    background: url(../images/index_goods_bg.png) repeat-y;
+}
+.index_goods h2 {
+    height: 28px;
+    padding-left: 13px;
+    font-size: 14px;
+    line-height: 28px;
+    padding-top: 17px;
+    border-bottom: 2px solid #2B2B2B;
+}
+.l_arrivals {
+    height: 307px;
+}
+/*商品滑动*/
+.l_arrivals .arrivals_box {
+    width: 760px;
+    margin-left: 10px;
+    height: 260px;
+    position: relative;
+    overflow: hidden;
+    /*position: relative;*/
+}
+.l_arrivals .arrivals_box .arr_ul {
+    position: absolute;
+    z-index: 2;
+    left: 30px;
+    top: 0;
+    width: 1462px;
+    /*height: 1520px;*/
+    height: 100%;
+}
+.arr_ul li{
+    width:160px;
+    padding:8px 10px;
+    height:256px;
+    float:left;
+    border:1px solid #fff;   
+}
+
+.arr_ul li:hover img{
+    opacity:0.7;
+}
+.arr_ul li img{
+    width:128px;
+    height: 128px;
+}
+.arr_ul li h4{
+    font-size:14px;
+    line-height: 14px;
+    margin:5px 0;
+}
+.arr_ul li p span::before{
+    content: '￥';
+}
+.arr_ul li p span{
+    color:red;
+    font-size:14px;
+}
+.arr_ul li p{
+    font-size:12px;
+    font-weight:bold;
+    color:#000;
+    line-height: 20px;
+}
+/*方向按钮*/
+.l_arrivals .arrivals_box button {
+    position: absolute;
+    display: block;
+    width: 13px;
+    height: 33px;
+    top: 50%;
+    margin-top: -16px;
+    border: none;
+    z-index: 3;
+    outline: none;
+}
+
+.l_arrivals .arrivals_box .arr_prev {
+    left:0;
+    background: url(../images/arrival_btnp.png) no-repeat;
+}
+.l_arrivals .arrivals_box .arr_next {
+    right: 0;
+    background: url(../images/arrival_btnn.png) no-repeat;
+}
+.sellers {
+    /*height: 874px;*/
+    height: 869px;
+}
+.sellers .goodsUl{
+    width:730px;
+    padding-left: 20px;
+}
+.goodsUl li{
+    width:160px;
+    padding:8px 6px;
+    height:256px;
+    float:left;
+    border:1px solid #fff;   
+}
+.goodsUl li:hover{
+    border:1px solid red;
+}
+.goodsUl li:hover img{
+    opacity:0.7;
+}
+.goodsUl li img{
+    width:158px;
+    height: 158px;
+}
+.goodsUl li h4{
+    font-size:14px;
+    line-height: 14px;
+    margin:5px 0;
+}
+.goodsUl li p span::before{
+    content: '￥';
+}
+.goodsUl li p span{
+    color:red;
+    font-size:14px;
+}
+.goodsUl li p{
+    font-size:12px;
+    font-weight:bold;
+    color:#000;
+    line-height: 22px;
+}
+
+
+
+
+.goods_news {
+    height: 379px; 
+    width: 750px;
+     padding-top: 5px;
+    height: 384px;
+    padding-left: 20px;
+    /*h+5*/
+    position: relative;
+}
+.goods_news h3 {
+    padding-left: 24px;
+    height: 17px;
+    line-height: 17px;
+    margin-bottom: 9px;
+    background:url(../images/top_designer.png) no-repeat;
+}
+.goods_news .more {
+    position: absolute;
+    display: block;
+    top:5px;
+    right: 0;
+    height: 17px;
+    line-height: 17px;
+    color: #000;
+    text-decoration: underline;
+}
+.goods_news ul li {
+    height: 84px;
+    margin-top: 6px;
+    position: relative;
+    overflow: hidden;
+}
+.goods_news ul li .img {
+    width: 59px;
+    height: 59px;
+    float: left;
+    padding-right: 8px;
+}
+.goods_news ul li img {
+    width: 59px;
+    height: 59px;
+}
+.goods_news ul li .title {
+    position:absolute;
+    left: 67px;
+    top:0;
+    line-height: 24px;
+    color: #000;
+    text-decoration: underline;
+}
+.goods_news ul li p {
+    padding-top: 24px;
+    line-height: 18px;
+}
+/*tags*/
+.tags {
+    height: 13px;
+    padding: 23px 0 11px 0;
+}
+.tags .container {
+    height: 13px;
+}
+.tags span {
+    height: 13px;
+    font-size: 12px;
+    line-height: 13px;
+}
+.tags a {
+    display: inline-block;
+    width: 8px;
+    height: 13px;
+    padding: 0 12px;
+    color: #000;
+    border-right: 1px solid #000;
+}
+.tags a:nth-child(27) {
+    border-right: none;
+}

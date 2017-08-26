@@ -1,0 +1,537 @@
+*{margin:0;padding:0;}
+ul{list-style:none;}
+a{text-decoration:none;}
+.clearfixed::after{
+    content:"";
+    height:0;
+    clear:both;
+    display:block;
+    overflow:hidden;
+    visibility:hidden;
+}
+.container{
+    width:980px;
+    margin:0 auto;
+    min-width:980px;
+}
+.fl{
+    float: left;
+}
+/*---------header--------*/
+/*header{
+    height:88px;
+}*/
+/*-----------nav----------*/
+nav {
+    background-color: #2B2B2B;
+}
+nav .container {
+    height: 30px;
+}
+.pri_nav {
+}
+
+/*-----nav_right-----*/
+.nav_right {
+    font-size: 12px;
+}
+.nav_left{
+    position: relative;
+    z-index: 10;
+}
+.nav_right li a {
+    color: #fff;
+    display: block;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+}
+.nav_right li a span {
+    padding-left: 18px;
+    padding-right: 14px;
+    border-right: 1px solid #fff;
+    position: relative;
+}
+nav .nav_right .brands {
+    padding-left: 27px;
+}
+.brands i {
+    display: block;
+    width: 11px;
+    height: 11px;
+    background: url(../images/brands.png);
+    position: absolute;
+    top: 3px;
+    left: 7px;
+}
+nav .nav_right .albums {
+    padding-left: 28px;
+}
+.albums i {
+    display: block;
+    width: 16px;
+    height: 11px;
+    background: url(../images/off.png);
+    position: absolute;
+    top: 3px;
+    left: 7px;
+}
+.nav_right li:last-of-type a span {
+    border-right: 0 none;
+}
+
+/*---------nav_left--------*/
+.nav_left {
+    font-size: 12px;
+    height: 30px;
+    width: 210px;
+    line-height: 30px;
+    background-color: #595959;
+    position: relative;
+}
+.nav_left>p {
+    color: #CFCFCF;
+    font-weight: bold;
+    display: block;
+    padding-left: 10px;
+    height: 100%;
+    width: 200px;
+}
+.nav_left>p i {
+    position: absolute;
+    top: 11px;
+    right: 14px;
+    width: 16px;
+    height: 10px;
+    background: url(../images/menu.png);
+}
+
+/*-------nav_sec--------*/
+.nav_sec {
+    display: none;
+    background: #fff;
+    width: 210px;
+    height: 420px;
+    z-index: 1;
+    box-shadow: 0px 3px 3px 0px #ddd;
+    position: relative;
+}
+.nav_left:hover .nav_sec {
+    display: block;
+}
+.nav_sec_item {
+    height: 70px;
+    padding-left: 10px;
+    padding-right: 12px;
+    color: #404040;    /*position:relative;*/
+}
+.nav_sec_item:nth-child(2n) {
+    background: #F1F1F1;
+}
+.secitem_tp {
+    padding-top: 13px;
+    padding-bottom: 6px;
+    height: 12px;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 12px;
+    position: relative;
+}
+.secitem_tp i {
+    display: block;
+    width: 5px;
+    height: 7px;
+    position: absolute;
+    background: url(../images/sec_dropdown.png);
+    right: 0;
+    top: 13px;
+}
+.secitem_cont {
+    width: 100%;
+    height: 39px;
+    font-size: 12px;
+    line-height: 18px;
+}
+.secitem_cont span {
+    float: left;   /*width:33.3333%; */
+    padding-right: 15px;
+}
+.secitem_cont span a {
+    color: #404040;    /*padding-right: 15px;*/
+}
+.nav_sec_item_on .secitem_cont span a {
+    color: #C5CFCF;    /*padding-right: 15px;*/
+}
+.nav_sec_item_on {
+    background-color: #2B2B2B;
+    color: #C5CFCF;
+    height: 70px;
+    padding-left: 10px;
+    padding-right: 12px;
+}
+.nav_sec_item_on a {
+    color: #C5CFCF;
+}
+.nav_sec_item_on .secitem_tp i {
+    display: none;
+}
+.nav_sec_item_on .nav_trd {
+    display: block;
+}
+
+/* 三级导航 */
+.nav_trd {
+    display: none;
+    width: 580px;
+    box-shadow: 0px 2px 2px 1px #ccc;
+    background-color: #404040;
+    position: absolute;
+    right: -580px;    /*top:0;*/
+    z-index: 999;
+}
+.trd_left {
+    width: 409px;
+    height: 100%;
+    border-right: 1px dotted #505050;
+    padding: 11px 5px 11px 10px;
+}
+.trd_title {
+    font-size: 12px;
+    font-weight: bold;
+    color: #999999;
+    line-height: 20px;
+}
+.trd_cont {
+    width: auto;
+    border-top: 2px solid #999;
+    padding-left: 5px;
+    padding-top: 11px;
+}
+.trd_cont li {
+    padding-bottom: 11px;
+    float: left;
+    height: 12px;
+    width: 130px;
+}
+.trd_cont a {
+    float: left;
+    line-height: 12px;
+    font-size: 12px;
+    color: #C6CFC6;
+}
+.trd_right {
+    width: 133px;
+    padding: 11px 12px 0 10px;
+}
+.arrivals{
+    display:block;
+    font-size: 12px;
+    line-height: 22px;
+    width: 110px;
+    height: 22px;
+    background-color: #5A5A5A;
+    padding-left: 9px;
+    position: relative;
+    color:#fff;
+}
+
+.arrivals i{
+    display:block;
+    height: 21px;
+    width: 21px;
+    background:url(../images/arrivals.png);
+    position: absolute;
+    right:0;
+    top:-1px;
+}
+.final{
+    position: relative;
+}
+.final a{
+    position:relative;
+}
+
+.final i{
+    position: absolute;
+    display:block;
+    right:-20px;
+    top: 4px;
+    width:16px;
+    height:11px;
+    background:url(../images/off.png);
+}
+.arrivallist{
+
+}
+.arrivallist li{
+    line-height: 22px;
+    font-size: 12px;
+    position: relative;
+}
+.arrivallist li i{
+    background:url(../images/arrow_right.png);
+    display:block;
+    width: 8px;
+    height: 9px;
+    position:absolute;
+    right:0;
+    top: 8px;
+}
+/*---------------main------------*/
+#mains .mainHead{
+    height:30px;
+    line-height: 30px;
+    overflow:hidden;
+}
+#mains .mainHead .home{
+    display:block;
+    float:left;
+    margin-top:5px;
+    width:24px;
+    height:17px;
+    background:url("../images/main.fw.png");
+}
+#mains .mainHead .i1{
+    display:inline-block;
+    width:13px;
+    height:13px;
+    background:url("../images/main.fw.png") -30px 0;
+}
+#mains .mainHead .s1 a{
+    color:#333;
+    font-size:14px;
+}
+#mains .mainBody1{
+    width:200px;
+    float:left;
+    margin-right:10px;
+}
+#mains .mainBody1 .body1Top{
+    border-bottom:2px solid #ccc;
+}
+#mains .mainBody1 .mainBodyTop{
+    height:28px;
+    border-bottom:2px solid #ccc;
+    position:relative;
+}
+#mains .mainBody1 .mainBodyTop span{
+    font-size:14px;
+    font-weight:bold;
+    border-bottom:2px solid #333;
+    padding-bottom:4px;
+    position:absolute;
+    left:0;
+    bottom:-2px;
+}
+#mains .mainBody1 .d2{
+    padding-top:20px;
+}
+#mains .mainBody1 .d2 span{
+    display:block;
+    font-size:13px;
+    line-height:30px;
+    font-weight:bold;
+}
+#mains .mainBody1 .d2 span i{
+    display:inline-block;
+    width:12px;
+    height:13px;
+    margin-right:6px;
+    background:url("../images/main.fw.png") -60px 0;
+}
+#mains .mainBody1 .d2 li.hide{display:none;}
+#mains .mainBody1 .d2 li a{
+    font-size:13px;
+    color:#584f45;
+    line-height: 30px;
+}
+#mains .mainBody1 .d2 li:hover a{
+    color:red;
+}
+#mains .mainBody1 .d2 li i{
+    display:inline-block;
+    width:12px;
+    height:11px;
+    margin-right:6px;
+    background:url("../images/main.fw.png") -80px 0;
+}
+#mains #mainBodyU1 li{
+    height:300px;
+    padding-top:5px;
+    border:1px solid #fff;
+    border-bottom:1px dashed #ccc;
+}
+#mains #mainBodyU1 li:hover{
+    border:1px solid red;
+}
+#mains #mainBodyU1 li:hover img{
+    opacity:0.7;
+}
+#mains #mainBodyU1 li img{
+    width:198px;
+}
+#mains #mainBodyU1 li h4{
+    font-size:15px;
+}
+#mains #mainBodyU1 li p span{
+    font-size:15px;
+    color:red;
+}
+#mains #mainBodyU1 li p span::before{
+    content: '￥';
+}
+#mains #mainBodyU1 li p{
+    font-size:14px;
+    font-weight:bold;
+    color:#000;
+}
+#mains .mainBody2{
+    float:left;
+    width:770px;
+}
+#mains .mainBody2 .mainBody2Top{
+    height:28px;
+    line-height: 28px;
+    border-bottom:2px solid #333;
+}
+#mains .mainBody2 .mainBody2Top .s1{
+    font-size:14px;
+    font-weight:bold;
+}
+#mains .mainBody2 .mainBody2Top a{
+    font-size:14px;
+    display:inline-block;
+    width:65px;
+    color:#333;
+    margin:0 5px;
+}
+#mains .mainBody2 .mainBody2Top a:hover{
+    color:red;
+    font-weight:bold;
+}
+#mains .mainBody2 .mainBody2Top .a2 i{
+    display:inline-block;
+    width:12px;
+    height:12px;
+    background:url("../images/main.fw.png") -100px 0;
+}
+#mains .mainBody2 .mainBody2Top .a3 i{
+    display:inline-block;
+    width:13px;
+    height:12px;
+    background:url("../images/main.fw.png") -120px 0;
+}
+#mains .mainBody2 .mainBody2Top .d1{
+    float:right;
+    width:205px;
+}
+#mains .mainBody2 .mainBody2Top .d1 .i1{
+    display:inline-block;
+    width:15px;
+    height:15px;
+    background:url("../images/main.fw.png") -140px 0;
+}
+#mains .mainBody2 .mainBody2Top .d1 span{
+    display:inline-block;
+    width:132px;
+}
+#mains .mainBody2 .mainBody2Top .d1 span a{
+    display:inline-block;
+    width:30px;
+    height:20px;
+    line-height: 20px;
+    margin:0;
+    font-size:16px;
+    text-align:center;
+}
+#mains .mainBody2 .mainBody2Top .d1 .i2{
+    display:inline-block;
+    width:40px;
+    height:15px;
+    background:url("../images/main.fw.png") -160px 0;
+}
+#mains .mainBody2 .goods{
+    width:768px;
+    padding:0 1px;
+}
+#mains .mainBody2 .goods li{
+    width:184px;
+    padding:8px 3px;
+    height:300px;
+    float:left;
+    border:1px solid #fff;    
+}
+#mains .mainBody2 .goods li:hover{
+    border:1px solid red;
+}
+#mains .mainBody2 .goods li:hover img{
+    opacity:0.7;
+}
+#mains .mainBody2 .goods li img{
+    width:186px;
+}
+#mains .mainBody2 .goods li h4{
+    font-size:15px;
+    line-height: 18px;
+    margin:5px 0;
+}
+#mains .mainBody2 .goods li p span::before{
+    content: '￥';
+}
+#mains .mainBody2 .goods li p span{
+    color:red;
+    font-size:15px;
+}
+#mains .mainBody2 .goods li p{
+    font-size:14px;
+    font-weight:bold;
+    color:#000;
+    line-height: 24px;
+}
+#mains .mainBody2>.d1{
+    margin-top:30px;
+    width:205px;
+    float:right;
+    margin-bottom:20px;
+}
+#mains .mainBody2 .d1 .i1{
+    display:inline-block;
+    width:15px;
+    height:15px;
+    background:url("../images/main.fw.png") -140px 0;
+}
+#mains .mainBody2 .d1 span{
+    display:inline-block;
+    width:132px;
+    font-size:14px;
+}
+#mains .mainBody2 .d1 span a{
+    display:inline-block;
+    color:#000;
+    width:30px;
+    height:20px;
+    line-height: 20px;
+    margin:0;
+    font-size:16px;
+    text-align:center;
+    cursor: pointer;
+}
+#mains .mainBody2 .d1 span a.active{color:red;}
+#mains .mainBody2 .d1 span a:hover{
+    color:red;
+}
+#mains .mainBody2 .d1 .i2{
+    display:inline-block;
+    width:40px;
+    height:15px;
+    background:url("../images/main.fw.png") -160px 0;
+}
+#mains .toTop{
+    width:50px;
+    height:164px;
+    position:fixed;
+    right:70px;
+    top:110px;
+    display:none;
+    background:url("../images/main.fw.png") 0 -30px;
+}

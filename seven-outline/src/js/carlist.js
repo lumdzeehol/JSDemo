@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-08-05 17:34:43
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-08-09 09:09:10
+* @Last Modified time: 2017-08-26 10:41:12
 */
 
 /*加载购物车列表*/
@@ -10,7 +10,6 @@ function lz_shoppingLoadCar(){
     var carlist = [];
     if (Cookie.get('cartlist').length>0) {
         console.log(45554343);
-             
         carlist = JSON.parse(Cookie.get('cartlist'));
     }
     console.log(carlist);
@@ -58,27 +57,34 @@ function lz_shoppingLoadCar(){
     }
          
     var ul = document.getElementsByClassName('shopcar_list')[0];
-    ul.innerHTML = lis;
+    var $ul = $('.shopcar_list').first();
+    $ul.html(lis);
+    // ul.innerHTML = lis;
     //添加点击事件
-    ul.onclick = op_carlistitem;
+    $ul.click(op_carlistitem);
     for (var i = 0; i <carlist.length; i++) {
-        var numInput = ul.children[i].children[2].children[1];
-        numInput.onchange = onItemNumberChange;
+        // var numInput = ul.children[i].children[2].children[1];
+        var $numInput = $ul.children().eq(0).children().eq(2).children().eq(1);
+        // numInput.onchange = onItemNumberChange;
+        $numInput.change(onItemNumberChange);
     };
-    var totalPrice = document.getElementsByClassName('car_bottom_rt')[0].children[0].children[0];
-    var totalSaveTag = document.getElementsByClassName('car_bottom_rt')[0].children[1];
-    console.log(total);
-    totalPrice.innerHTML = total;
-    console.log(totalPrice.innerHTML,totalPrice);
-    // console.log('total inner '+totalPrice.innerHTML);
+    // var totalPrice = document.getElementsByClassName('car_bottom_rt')[0].children[0].children[0];
+    var $totalPrice = $('car_bottom_rt').eq(0).children().eq(0).children().eq(0);
+    // var totalSaveTag = document.getElementsByClassName('car_bottom_rt')[0].children[1];
+    var $totalSaveTag = $('car_bottom_rt').eq(0).children().eq(1);
+
+    $totalPrice.html(total);
          
-    totalSaveTag.innerHTML = 'You save' + totalSave;
+    // totalSaveTag.innerHTML = 'You save' + totalSave;
+    $totalSaveTag.html('You save' + totalSave);
 }
+
 
 function onItemNumberChange(){
     var item_num = parseInt(this.value);
     if (isNaN(item_num)||item_num<1) {alert('请输入数字!'); return false;}
-    var guid = this.parentNode.parentNode.dataset.guid;
+    // var guid = this.parentNode.parentNode.dataset.guid;
+    var guid = $(this).parent().parent().data('guid');
     var carlist = [];
     if (Cookie.get('cartlist').length>0) {
         carlist = JSON.parse(Cookie.get('cartlist'));
@@ -196,28 +202,92 @@ function op_carlistitem(ev){
 
 }
 
+//头部onmouseover和onmouseout事件
+function l_headerEvent(){
+    var ali_1 = document.querySelector('.ali_1');
+    var li_2 = document.querySelector('.li_2');
+    var list1 = document.querySelector('.list1');
+    var list_box = document.querySelector('.list_box');
+    ali_1.onmouseover = function(){
+        clearTimeout(ali_1.timer);
+        clearTimeout(li_2.timer);
+        list_box.style.display = 'none';
+        li_2.classList.remove('hover');
+        ali_1.classList.add('hover');
+        list1.style.display = 'block';
+    }
+    ali_1.onmouseout = function(){     
+      ali_1.timer =setTimeout(function(){
+          list1.style.display = 'none';
+          ali_1.classList.remove('hover');
+      },1500);  
+    }
+     li_2.onmouseover= function(){
+        clearTimeout(li_2.timer);
+        clearTimeout(ali_1.timer);
+        li_2.classList.add('hover');
+        list1.style.display = 'none';
+        ali_1.classList.remove('hover');
+        list_box.style.display = 'block';
+    }
+    
+    li_2.onmouseout = function(){
+        
+        li_2.timer= setTimeout(function(){
+        list_box.style.display = 'none';
+        li_2.classList.remove('hover');
+        },1500); 
+    }
+}
+//添加  梁嫚嫚  8/19
+function l_hotList(){
+    var hot_list=document.querySelector('.hot_list');
+    var res = l_getData(hot_list,12);
+    var list= res.map(item=>{
+        return `<li data-guid="${item.guid}" class="hotlist_item">  
+            <a href="goods.html?name=${(item.name)}&imgurl=${item.imgurl}&price=${item.price}&sale=${item.sale}&guid=${item.guid}"><img src="${item.imgurl}"/></a>
+            <p>${item.name}</p>
+            <P>原价：<del>${item.price}</del><span>${item.sale}</span></p>
+            <button></button>
+        </li>`
+    }).join('');
+    hot_list.innerHTML = list; 
+}
+//切换
+function l_hotScroll(){
+    var hot_prev=document.querySelector('.hot_prev');
+    var hot_next=document.querySelector('.hot_next');
+    var hot_ul=document.querySelector('.hot_list'); 
+    console.log(hot_ul)  
+    hot_prev.onclick=function(){
+        hot_prev.style.display = 'none';
+        hot_next.style.display = 'none';
+          var left=hot_ul.offsetLeft;
+          if(left<=-960){ 
+            hot_ul.style.left= '-960px';
+            hot_prev.style.display = 'block';
+            hot_next.style.display = 'block';
+            return;
+          }
+          animate(hot_ul,{left:-960},function(){
+            hot_prev.style.display = 'block';
+            hot_next.style.display = 'block';
+          });
 
-// <li class="goods_item" data-guid="">
-//     <img src="" alt="" class="fl"/>
-//     <div class="item_msg fl">
-//         <p>GuuciguccigucciGuuciguccigucci</p>
-//         <p>ID:#22223</p>
-//         <p>Size:default</p>
-//     </div>
-//     <div class="quanity fl">
-//         <button>-</button>
-//         <input type="number" />
-//         <button>+</button>
-//     </div>
-//     <div class="price_dv fl">
-//         <p><del>s</del></p>
-//         <p><span>s</span></p>
-//     </div>
-//     <div class="total_dv fl">
-//         <p>s</p>
-//         <p>ss</p>
-//     </div>
-//     <div class="remove fl">
-//         <button>&times</button>
-//     </div>
-// </li>
+    }
+    hot_next.onclick=function(){
+        hot_next.style.display = 'none';
+        hot_prev.style.display = 'none';
+          var left=hot_ul.offsetLeft;
+          if(left>=954){
+            hot_ul.style.left='954px';
+            // hot_prev.style.display = 'block';
+            // hot_next.style.display = 'block';
+            return;
+          }
+          animate(hot_ul,{left:0},function(){
+            hot_next.style.display = 'block';
+            hot_prev.style.display = 'block';
+          });
+        }  
+}

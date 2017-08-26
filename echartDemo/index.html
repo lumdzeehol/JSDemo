@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style>
+            #main{
+                width: 400px;
+                height: 200px;
+                border: 1px solid #ddd;
+            }
+        </style>
+        <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+        <!-- 引入 Echarts 文件 -->
+        <script src="lib/echarts.common.min.js"></script>
+    </head>
+    <body>
+        <div id="main">
+            
+        </div>
+        <script>
+        /*初始化一个echarts实例*/
+         var myEcharts = echarts.init($('#main')[0]);
+
+         var option = {
+            /*标题*/
+            title: {
+                text: '我第一个echarts'
+            },
+            /*浮框*/
+            tooltip: {
+                show: false
+            },
+            /*单位*/
+            legend: {
+                data: ['万元' ]
+            },
+            xAxis: {
+                data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+            },
+            yAxis: {},
+            series: [{
+                name: '万元',
+                type: 'line',
+                data: [4,3,50,100,66,22,100]
+            }]
+         };
+        // myEcharts.tooltip.show = false;
+         myEcharts.setOption(option);
+
+        </script>
+    </body>
+</html>

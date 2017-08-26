@@ -5,80 +5,71 @@
         <link rel="stylesheet" type="text/css" href="../css/reset.css" />
         <link rel="stylesheet" type="text/css" href="../font/iconfont.css" />
         <link rel="stylesheet" type="text/css" href="../css/public.css" />
-        <link rel="stylesheet" type="text/css" href="../css/index.css" />
+        <link rel="stylesheet" type="text/css" href="../css/dress.css" />
         <link rel="stylesheet" type="text/css" href="../css/car.css" />
-        <!-- <script type="text/javascript" src="../js/index.js"></script> -->
+        <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
         <script type="text/javascript" src="../js/common.js"></script>
         <script type="text/javascript" src="../js/carlist.js"></script>
         <script>
         window.onload = function(){
-            lz_loadCar();
+            l_headerEvent();
+            lz_loadCar_index();
             lz_shoppingLoadCar();
+            l_hotList();
+            l_hotScroll();
+
         }
         </script>
     </head>
     <body>
         <header>
-            <div class="container clear">
-                 <div class="top clear">
-                    <p class="fl">Welcome,<a href="#"> Sign in</a> or <a href="#">Reqister</a><span> test</span>,<a href="#"> Sign out</a></p>
-                    <ul class="fr clear" >
-                        <li class="li_1">
-                            <a href="#">My Account</a><i class="iconfont icon-sanjiaoxing02"></i>
-                            <div class="list1">
-                                <a href="#">My Account</a>
-                                <a href="#">My Account</a>
-                                <a href="#">My Account</a>
-                                <a href="#">My Account</a>
-                                <a href="#">My Account</a>
-                                <a href="#">My Account</a>
-                            </div>
-                        </li>
-                        <li class="li_2">
-                         <i class="iconfont icon-gouwuche"></i><span> 1 Items</span><span class="spa_2"> $2946</span><i class="iconfont icon-sanjiaoxing02"></i>
-                         <div class="list_box">
-                             <ul class="list2">
-                                 <li class="clear">
-                                     <img src="../images/item_bg.png" />
-                                     <a href="#">MyAccountMyAcc ountMy AccountM yAccountMy Account MyAccount</a><span>$219</span>&times;<span>1</span>
-
-                                 </li>
-                                 <li class="clear">
-                                     <img src="../images/item_bg.png" />
-                                     <a href="#">MyAccount MyAccountMy AccountMy Account MyAccountMy Account</a><span>$219</span>&times;<span>1</span>
-                                 </li>
-                                 <li class="clear">
-                                     <img src="../images/item_bg.png" />
-                                     <a href="#">MyAccountMyAccount My AccountMy Account MyAccount MyA</a><span>$219</span>&times;<span>1</span>
-                                 </li>
-                             </ul>
-                             <h4 >Subtotal:<strong>$219</strong></h4>
-                             <a href="car.html" class="tocarHtml">Check Out</a>
-                         </div> 
-                        </li>
-                        <li><a href="#">Order Tracking</a></li>
-                        <li><i class="iconfont icon-wenhaokongxin"></i><a href="#">Help</a></li>
-                    </ul>
-                 </div>
-                 <div class="clear menu" id="search" > 
-                     <img class="fl" src="../images/logosmall.png" alt="logo" />             
-                     <div class="fl form clear">
-                         <input type="text" class="txt" placeholder="Please enter the keywords" />
-                         <input type="button" class="btn" value="search" />
-                     </div>
-                 </div>
-                 <p class="p1"><a href="#">LV Handbags</a><a href="#">shoes</a><a href="#">Rolex watch</a></p>            
-            </div>
-            <div id="topSearch">
-                <div class="container">
-                    <img class="fl" src="../images/logosmall.png" alt="logo" />             
-                    <div class="fl form clear">
-                        <input type="text" class="txt" placeholder="Please enter the keywords" />
-                        <input type="button" class="btn" value="search" />
+               <div class="container clear">
+                    <div class="top clear">
+                       <p class="fl">Welcome,<a href="sign.html"> Sign in</a> or <a href="sign.html">Reqister</a><span> test</span>,<a href="sign.html"> Sign out</a></p>
+                       <ul class="fr clear" >
+                           <li class="ali_1">
+                               <a href="#">My Account</a><i class="iconfont icon-sanjiaoxing02"></i>
+                               <div class="list1">
+                                   <a href="#">My Account</a>
+                                   <a href="#">My Account</a>
+                                   <a href="#">My Account</a>
+                                   <a href="#">My Account</a>
+                                   <a href="#">My Account</a>
+                                   <a href="#">My Account</a>
+                               </div>
+                           </li>
+                           <li class="li_2">
+                                <i class="iconfont icon-gouwuche"></i><span> 0 Items</span><span class="spa_2"> $0</span><i class="iconfont icon-sanjiaoxing02"></i>
+                                <div class="list_box">
+                                    <ul class="list2">
+                                    </ul>
+                                    <h4 >Subtotal:<strong>$0</strong></h4>
+                                    <a href="car.html" class="tocarHtml">Check Out</a>
+                                </div> 
+                               </li>
+                           <li><a href="#">Order Tracking</a></li>
+                           <li><i class="iconfont icon-wenhaokongxin"></i><a href="#">Help</a></li>
+                       </ul>
                     </div>
-                </div>
-                 
-            </div>
+                    <div class="clear menu" id="search" > 
+                        <img class="fl" src="../images/logosmall.png" alt="logo" />             
+                        <div class="fl form clear">
+                            <input type="text" class="txt" placeholder="Please enter the keywords" />
+                            <input type="button" class="btn" value="search" />
+                        </div>
+                    </div>
+                    <p class="p1"><a href="#">LV Handbags</a><a href="#">shoes</a><a href="#">Rolex watch</a></p>            
+               </div>
+               <div id="topSearch">
+                   <div class="container">
+                       <img class="fl" src="../images/logosmall.png" alt="logo" />             
+                       <div class="fl form clear">
+                           <input type="text" class="txt" placeholder="Please enter the keywords" />
+                           <input type="button" class="btn" value="search" />
+                       </div>
+                   </div>
+                    
+               </div>
         </header>
         <nav>
             <div class="container">
@@ -732,7 +723,7 @@
                         </li> -->
                     </ul>
                     <div class="car_bottom">
-                          <a href="../index.html" class="continue_shop">continue Shopping</a>
+                          <a href="dress.html" class="continue_shop">continue Shopping</a>
                           <div class="car_bottom_rt fr">
                             <p>Cart Total:<span>0.00</span></p>
                             <p>your toaotlasdsdsa</p>
@@ -743,43 +734,9 @@
                 <div class="hotitems">
                     <p>Hot Items</p>
                     <ul class="hot_list">
-                        <li class="hotlist_item">
-                            <img src="../images/hotitem.png" alt="" />
-                            <p>Louis Vuitton Monogram Vers....</p>
-                            <p><del>$2455.00</del><span>225.99 py6.</span></p>
-                            <button></button>
-                        </li>
-                        <li class="hotlist_item">
-                            <img src="../images/hotitem.png" alt="" />
-                            <p>Louis Vuitton Monogram Vers....</p>
-                            <p><del>$2455.00</del><span>225.99 py6.</span></p>
-                            <button></button>
-                        </li>
-                        <li class="hotlist_item">
-                            <img src="../images/hotitem.png" alt="" />
-                            <p>Louis Vuitton Monogram Vers....</p>
-                            <p><del>$2455.00</del><span>225.99 py6.</span></p>
-                            <button></button>
-                        </li>
-                        <li class="hotlist_item">
-                            <img src="../images/hotitem.png" alt="" />
-                            <p>Louis Vuitton Monogram Vers....</p>
-                            <p><del>$2455.00</del><span>225.99 py6.</span></p>
-                            <button></button>
-                        </li>
-                        <li class="hotlist_item">
-                            <img src="../images/hotitem.png" alt="" />
-                            <p>Louis Vuitton Monogram Vers....</p>
-                            <p><del>$2455.00</del><span>225.99 py6.</span></p>
-                            <button></button>
-                        </li>
-                        <li class="hotlist_item">
-                            <img src="../images/hotitem.png" alt="" />
-                            <p>Louis Vuitton Monogram Vers....</p>
-                            <p><del>$2455.00</del><span>225.99 py6.</span></p>
-                            <button></button>
-                        </li>
                     </ul>
+                    <button class="hot_prev"></button>
+                    <button class="hot_next"></button>
                 </div>
             </div>
         </div>

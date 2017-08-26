@@ -9,11 +9,13 @@
     <link rel="stylesheet" type="text/css" href="../css/public.css" />
     <link rel="stylesheet" type="text/css" href="../css/goods.css" />
     <link rel="stylesheet" type="text/css" href="../css/details.css" />
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
     <script type="text/javascript" src="../js/goods.js"></script>
     <script type="text/javascript" src="../js/common.js"></script>
     <script type="text/javascript">
     window.onload=function(){
         goodsListIn();
+        l_headerEvent()
         toTop1();
         //信息列表收缩
         l_customerImg();
@@ -21,9 +23,9 @@
         l_verCode();
         //星星和评论
         l_conment();
-        inUl1();
-       
-       lz_loadCar();
+        l_Uside();
+        
+        lz_loadCar_index();
     }
 </script>
 </head>
@@ -31,9 +33,10 @@
   <header>
          <div class="container clear">
               <div class="top clear">
-                 <p class="fl">Welcome,<a href="#"> Sign in</a> or <a href="#">Reqister</a><span> test</span>,<a href="#"> Sign out</a></p>
+                 <p class="fl">Welcome,<a href="sign.html"> Sign in</a> or <a href="sign.html">Reqister</a><span> test</span>,<a href="sign.html"> Sign out</a></p>
                  <ul class="fr clear" >
-                     <li class="li_1">
+                     <li class="ali_1">
+                     <!-- 修改 -->
                          <a href="#">My Account</a><i class="iconfont icon-sanjiaoxing02"></i>
                          <div class="list1">
                              <a href="#">My Account</a>
@@ -45,14 +48,14 @@
                          </div>
                      </li>
                      <li class="li_2">
-                         <i class="iconfont icon-gouwuche"></i><span> 0 Items</span><span class="spa_2"> $0</span><i class="iconfont icon-sanjiaoxing02"></i>
-                         <div class="list_box">
-                             <ul class="list2">
-                             </ul>
-                             <h4 >Subtotal:<strong>$0</strong></h4>
-                             <a href="car.html" class="tocarHtml">Check Out</a>
-                         </div> 
-                        </li>
+                          <i class="iconfont icon-gouwuche"></i><span> 0 Items</span><span class="spa_2"> $0</span><i class="iconfont icon-sanjiaoxing02"></i>
+                          <div class="list_box">
+                              <ul class="list2">
+                              </ul>
+                              <h4 >Subtotal:<strong>$0</strong></h4>
+                              <a href="car.html" class="tocarHtml">Check Out</a>
+                          </div> 
+                         </li>
                      <li><a href="#">Order Tracking</a></li>
                      <li><i class="iconfont icon-wenhaokongxin"></i><a href="#">Help</a></li>
                  </ul>
@@ -76,14 +79,14 @@
              </div>
               
          </div>
-     </header>
+  </header>
     <main id="mains">
         <div class="container">
             <div class="mainHead" id="header">
                 <i class="home"></i>
-                <span class="s1"><a href="#">首页</a></span>
+                <span class="s1"><a href="../index.html">首页</a></span>
                 <i class="i1"></i>
-                <span class="s1"><a href="../index.html">女装/女士精品</a></span>
+                <span class="s1"><a href="dress.html">女装/女士精品</a></span>
                 <i class="i1"></i>
                 <span class="s1"><a href="#">连衣裙</a></span>
                 <i class="i1"></i>
@@ -91,13 +94,22 @@
             <div id="goodsDetail" class="clearfixed">
                 <div class="mainLeft">
                   <img src="" id="imgurl"/>
-                  <ul class="pics">
-                    <li><img src=""/></li>
-                    <li><img src="../images/p2.png" data-Src="../images/p2.png"/></li>
-                    <li><img src="../images/p3.png" data-Src="../images/p3.png"/></li>
-                    <li><img src="../images/p1.png" data-Src="../images/p1.png"/></li>
-                    <li><img src="../images/p2.png" data-Src="../images/p2.png"/></li>
-                  </ul>
+                  <div class="picShowBox">
+                      <ul class="pics clearfixed">
+                      <li class="changeC"><img src=""/></li>
+                      <li><img src="../images/p2.png" data-Src="../images/p2.png"/></li>
+                      <li><img src="../images/p3.png" data-Src="../images/p3.png"/></li>
+                      <li><img src="../images/p1.png" data-Src="../images/p1.png"/></li>
+                      <li><img src="../images/p2.png" data-Src="../images/p2.png"/></li>
+                      <li><img src="../images/p2.png" data-Src="../images/p2.png"/></li>
+                      <li><img src="../images/p3.png" data-Src="../images/p3.png"/></li>
+                      <li><img src="../images/p1.png" data-Src="../images/p1.png"/></li>
+                      <li><img src="../images/p2.png" data-Src="../images/p2.png"/></li>
+                      <li><img src="../images/p3.png" data-Src="../images/p3.png"/></li>
+                    </ul>
+                  </div>                 
+                  <span class="p_prev pic_btn"></span>
+                  <span class="p_next pic_btn"></span>
                 </div>
                 <div class="mainRight">
                     <h4 class="goodsname"></h4>

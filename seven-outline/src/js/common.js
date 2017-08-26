@@ -301,43 +301,37 @@ function initNav(){
             }
         }
         nav_sec_items[i].onmouseleave = function(){
-            	nav_sec_items[i].className = 'nav_sec_item';
-            	for(var j = 1;j<nav_sec_items[i].children.length; j++){
-            	    // nav_sec_items[i].children[j].querySelector('a').style.color = '#C5CFCF';
-            	    // var a_arr = nav_sec_items[i].children[j].querySelectorAll('a');
-            	    // a_arr.style.color = '#C5CFCF';
-            	    // console.log(nav_sec_items[i].children[j].querySelectorAll('a'));
-            	    var nav_trd_item = nav_sec_items[i].querySelector('.nav_trd');
-            	    nav_trd_item.style.top = ''; 
-            	}
-
+                nav_sec_items[i].className = 'nav_sec_item';
+                for(var j = 1;j<nav_sec_items[i].children.length; j++){
+                    // nav_sec_items[i].children[j].querySelector('a').style.color = '#C5CFCF';
+                    // var a_arr = nav_sec_items[i].children[j].querySelectorAll('a');
+                    // a_arr.style.color = '#C5CFCF';
+                    // console.log(nav_sec_items[i].children[j].querySelectorAll('a'));
+                    var nav_trd_item = nav_sec_items[i].querySelector('.nav_trd');
+                    nav_trd_item.style.top = ''; 
+                }
         }
     }
-    // for(let i = 0;i < navitems.length ; i++){
-    //     animate(navitems[i],{top: 0});
-    // }
-
-
 }
 // //加载顶部购物车
-function lz_loadCar(){
+function lz_loadCar_index(){
     var carlist = [];
     if (Cookie.get('cartlist').length>0) {
         carlist = JSON.parse(Cookie.get('cartlist'));
     }
     // console.log(carlist);
-
+         
     var total = 0;
     var lis = '';
     for(var i = 0;i < carlist.length;i++){
 
     	var sellPrice = carlist[i].sale;
     	if (carlist[i].qty > 5) {
-    	    sellPrice = carlist[i].sale - 20;
+    	    sellPrice = carlist[i].sale - 10;
     	}else if(carlist[i].qty > 10){
-    	    sellPrice = carlist[i].sale - 30;
+    	    sellPrice = carlist[i].sale - 20;
     	}else if(carlist[i].qty > 20){
-    	    sellPrice = carlist[i].sale - 40;
+    	    sellPrice = carlist[i].sale - 30;
     	}
         var str =   '<li dataguid='+carlist[i].guid+' class="clear">'
                         +'<img src="'+carlist[i].imgurl+'" alt="" />'
@@ -348,11 +342,11 @@ function lz_loadCar(){
         lis += str;
         total += carlist[i].qty*sellPrice;
     }
-
+         
     /*lis += '<h3>Subtotal:<strong>$'+total+'</strong></h3><input type="submit" value="Checkout" />';*/
     var ul = document.getElementsByClassName('list2')[0];
     ul.innerHTML = lis;
-   
+    console.log(ul);
     var item_num = ul.parentNode.parentNode.children[1];
     var totalprice = ul.parentNode.parentNode.children[2];
     var totalBottom = ul.nextElementSibling.children[0];
@@ -362,28 +356,27 @@ function lz_loadCar(){
     totalprice.innerHTML = ' $' + total;
     totalBottom.innerHTML = ' $' + total;
 }
-function lz_loadCar_index(){
+function lz_loadCar_index_sy(){
     var carlist = [];
     if (Cookie.get('cartlist').length>0) {
         carlist = JSON.parse(Cookie.get('cartlist'));
     }
     // console.log(carlist);
-
+         
     var total = 0;
     var lis = '';
     for(var i = 0;i < carlist.length;i++){
 
-    	var sellPrice = carlist[i].sale;
-    	if (carlist[i].qty > 5) {
-    	    sellPrice = carlist[i].sale - 20;
-    	}else if(carlist[i].qty > 10){
-    	    sellPrice = carlist[i].sale - 30;
-    	}else if(carlist[i].qty > 20){
-    	    sellPrice = carlist[i].sale - 40;
-    	}
-    	var imgurl_index=carlist[i].imgurl.slice(3);
+        var sellPrice = carlist[i].sale;
+        if (carlist[i].qty > 5) {
+            sellPrice = carlist[i].sale - 10;
+        }else if(carlist[i].qty > 10){
+            sellPrice = carlist[i].sale - 20;
+        }else if(carlist[i].qty > 20){
+            sellPrice = carlist[i].sale - 30;
+        }
         var str =   '<li dataguid='+carlist[i].guid+' class="clear">'
-                        +'<img src="'+imgurl_index+'" alt="" />'
+                        +'<img src="'+carlist[i].imgurl.slice(3)+'" alt="" />'
                         +'<a href="##">'+carlist[i].name+'</a>'
                         +'<span>$'+sellPrice+'</span>x'
                         +'<span>'+carlist[i].qty+'</span>'
@@ -391,10 +384,11 @@ function lz_loadCar_index(){
         lis += str;
         total += carlist[i].qty*sellPrice;
     }
-
+         
     /*lis += '<h3>Subtotal:<strong>$'+total+'</strong></h3><input type="submit" value="Checkout" />';*/
     var ul = document.getElementsByClassName('list2')[0];
     ul.innerHTML = lis;
+    console.log(ul);
     var item_num = ul.parentNode.parentNode.children[1];
     var totalprice = ul.parentNode.parentNode.children[2];
     var totalBottom = ul.nextElementSibling.children[0];
@@ -404,25 +398,29 @@ function lz_loadCar_index(){
     totalprice.innerHTML = ' $' + total;
     totalBottom.innerHTML = ' $' + total;
 }
-
-// function
-
+/**
+ * [动画函数]
+ * @param  {Element} ele    [动画元素]
+ * @param  {Object} opt   [动画属性集合]
+ * @param  {Function} callback   [回调函数]
+ */
 function animate(ele,opt,callback){
-    var clearcount = 0;
-    var len = 0;
+    //统计属性对象长度获取属性个数
+    var num=0;
     //遍历属性
     for(var attr in opt){
-        len++;
         createTimer(attr);
-
+        num++;
     }
-
+    //设置空数组接收动画完成后传入的值;
+    var arr=[];
     function createTimer(attr){
         // 根据属性定义定时器名字
         var timerName = attr + 'timer';
 
         // 获取目标值
         var target = opt[attr];
+
 
         clearInterval(ele[timerName]);
         ele[timerName] = setInterval(function(){
@@ -449,25 +447,52 @@ function animate(ele,opt,callback){
 
             // 到达目标值后清除动画定时器
             if(current === target || speed === 0){
-                
-
                 clearInterval(ele[timerName]);
 
                 // 重置目标值
                 current = target - speed;
-                
-                clearcount++;
-                if (clearcount === len) {
-                	if (typeof callback === 'function') {
-                    	callback();
-                	}
+                //完成目标值后给数组加一个值
+                arr.push('a');
+                //判断数组长度和num是否相等判断执行完毕且是否是函数
+                if(typeof callback=='function'&&arr.length==num){
+                    callback();
                 }
-
-                // 执行回调函数
-                // callback();
             }
-
             ele.style[attr] = current + speed + unit;
         },30);
     }
 }
+//添加函数： 梁嫚嫚  8/19
+/**
+ * [生成图片列表函数]
+ * @param  {Element} ele    [要生成图片列表内容的元素]
+ * @param  {Number} qty  [图片列表的li数量]
+ */
+ function l_getData(ele,qty){
+          var qty = qty;
+          var str = qty+'xhr';
+          var res;
+          str = new XMLHttpRequest();
+            str.onload = function(){
+                res = JSON.parse(str.responseText);console.log(res);
+            }     
+          str.open('get','../api/goodRandom.php?count='+qty,false);
+          str.send();
+          return res;
+      }
+// l_getData(goodsUl,12);//调用返回数据函数
+// 主页专用
+function l_getData_index(ele,qty){
+          var qty = qty;
+          var str = qty+'xhr';
+          var res;
+          str = new XMLHttpRequest();
+            str.onload = function(){
+                res = JSON.parse(str.responseText);console.log(res);
+            }     
+          str.open('get','api/goodRandom.php?count='+qty,false);
+          str.send();
+          return res;
+      }
+// l_getData(goodsUl,12);//调用返回数据函数
+

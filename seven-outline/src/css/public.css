@@ -31,7 +31,12 @@ header .container .top  .fl span {
     color:#FFCC00;
 }
 /*ul*/
-
+.show {
+    display: block;
+}
+.hidden{
+    display: none;
+}
 
 header .container .top ul li {
     float: left;
@@ -65,10 +70,9 @@ header .container .top ul li .spa_2{
     padding-left: 3px;
 
 }
-header .container .top ul .li_1,header .container .top ul .li_2 {
+header .container .top ul .ali_1,header .container .top ul .li_2 {
     border-left: 1px solid #FF4500;
     border-right: 1px solid #FF4500;
-    /*border-bottom: 1px solid #FF4500;*/
 }
 /*第一个li下的列表*/
 header .container .top  ul li .list1 {
@@ -116,27 +120,24 @@ header .container .top  ul li
     background-position: 0 -140px;
 }
 /*hover*/
-header .container .top ul .li_1:hover,header .container .top ul .li_2:hover {
+header .container .top ul .ali_1.hover,header .container .top ul .li_2.hover {
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
     margin-left: -1px;
     margin-left: -1px;
 }
-header .container .top  ul li:first-child:hover{
+header .container .top  ul li:first-child.hover{
     background-color: #fff; 
 } 
-header .container .top ul .li_1:first-child:hover a,header .container .top  ul li:first-child:hover i{
+header .container .top ul .ali_1:first-child.hover a,header .container .top  ul li:first-child.hover i{
     color: #FF4500;
     text-decoration: none;
 }
-header .container .top  ul li:first-child:hover .list1 {
+/*/*此处修改*/
+/*header .container .top  ul li:first-child:hover .list1 {
     display: block;
-}
-/*修改sub*/
-/*header .container .top .list_box input {
-    width: 100px;
-    height: 30px;
 }*/
+
 /*第二个li下的列表*/
 header .container .top  ul .li_2 .list_box {
     position: absolute;
@@ -145,17 +146,12 @@ header .container .top  ul .li_2 .list_box {
     left:-1px;
     display: none;
     z-index: 2;
-
     background-color: #fff;
     border: 1px solid #ccc;
     border-top: none;
     padding: 0 15px 0 10px;
 }
-header .container .top  ul .li_2 .list_box .list2 {
-   
-   
-   
-}
+
 header .container .top  ul li .list_box .list2 li{
    float: none;
    height: 68px;
@@ -217,13 +213,14 @@ header .container .list_box .tocarHtml{
 }
 
 /*hover*/
-header .container .top  ul li:nth-child(2):hover {
+header .container .top  ul li:nth-child(2).hover {
     background-color: #fff;
 }
-header .container .top  ul li:nth-child(2):hover .list_box {
+/*需要修改*/
+/*header .container .top  ul li:nth-child(2):hover .list_box {
     display: block;
-}
-header .container .top  ul li .list2 li a:hover,header .container .top  ul li:nth-child(2):hover span,header .container .top  ul li:nth-child(2):hover i {
+}*/
+header .container .top  ul li .list2 li a.hover,header .container .top  ul li:nth-child(2).hover span,header .container .top  ul li:nth-child(2).hover i {
     color:#FF4500;
 }
 
@@ -331,8 +328,6 @@ header .container .p1 a{
 footer{
     /*height: 242px;*/
     /*background-color: #000;*/
-    position: relative;
-    z-index: -1;
     
 }
 footer .container {
